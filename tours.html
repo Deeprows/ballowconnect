@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Ballow Connect Tours & Packages — customized holidays, family vacations, honeymoon trips, city tours and worldwide travel experiences."
+  >
+
+  <title>Tours & Packages | Ballow Connect</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <style>
+
+    /* =====================================================
+       BALLOW CONNECT — TOURS
+    ===================================================== */
+
+    .tour-hero {
+
+      min-height: 500px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4,10,16,.95),
+          rgba(4,10,16,.72),
+          rgba(4,10,16,.35)
+        ),
+        url("icons/tour.jpeg");
+
+      background-size: cover;
+      background-position: center;
+
+    }
+
+
+    .tour-hero-content {
+
+      max-width: 760px;
+
+      padding-top: 55px;
+
+      position: relative;
+      z-index: 2;
+
+    }
+
+
+    .tour-hero h1 {
+
+      margin-top: 14px;
+
+      font-size:
+        clamp(42px, 6vw, 72px);
+
+      line-height: .98;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .tour-hero h1 strong {
+
+      color: var(--gold-light);
+
+    }
+
+
+    .tour-hero p {
+
+      max-width: 650px;
+
+      margin-top: 23px;
+
+      color: #c8d1d9;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .tour-buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .tour-intro {
+
+      background: #f7f9fa;
+
+      color: #111b25;
+
+    }
+
+
+    .tour-intro-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+
+    }
+
+
+    .tour-intro h2 {
+
+      margin-top: 13px;
+
+      font-size:
+        clamp(35px, 5vw, 54px);
+
+      line-height: 1.04;
+
+    }
+
+
+    .tour-intro h2 strong {
+
+      color: #b57f1f;
+
+    }
+
+
+    .tour-intro p {
+
+      margin-top: 18px;
+
+      color: #687580;
+
+      line-height: 1.8;
+
+    }
+
+
+    .tour-highlight {
+
+      padding: 32px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 15px 45px rgba(0,0,0,.07);
+
+    }
+
+
+    .tour-highlight-icon {
+
+      font-size: 46px;
+
+    }
+
+
+    .tour-highlight h3 {
+
+      margin-top: 15px;
+
+      font-size: 25px;
+
+    }
+
+
+    .tour-highlight p {
+
+      margin-bottom: 0;
+
+    }
+
+
+    /* =====================================================
+       TOUR TYPES
+    ===================================================== */
+
+    .tour-types {
+
+      background: var(--bg);
+
+    }
+
+
+    .tour-type-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 16px;
+
+      margin-top: 38px;
+
+    }
+
+
+    .tour-type {
+
+      min-height: 190px;
+
+      padding: 25px 20px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      background: var(--surface);
+
+      transition:
+        transform .25s ease,
+        border-color .25s ease;
+
+    }
+
+
+    .tour-type:hover {
+
+      transform: translateY(-5px);
+
+      border-color: var(--gold);
+
+    }
+
+
+    .tour-type-icon {
+
+      font-size: 39px;
+
+    }
+
+
+    .tour-type h3 {
+
+      margin-top: 15px;
+
+      font-size: 18px;
+
+    }
+
+
+    .tour-type p {
+
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* =====================================================
+       REQUEST SECTION
+    ===================================================== */
+
+    .tour-request {
+
+      background: #f6f8fa;
+
+      color: #111b25;
+
+    }
+
+
+    .tour-request-layout {
+
+      display: grid;
+
+      grid-template-columns:
+        .72fr 1.28fr;
+
+      gap: 45px;
+
+      align-items: start;
+
+    }
+
+
+    .tour-request-copy h2 {
+
+      margin-top: 13px;
+
+      font-size:
+        clamp(35px, 5vw, 55px);
+
+      line-height: 1.03;
+
+    }
+
+
+    .tour-request-copy h2 strong {
+
+      color: #b57f1f;
+
+    }
+
+
+    .tour-request-copy > p {
+
+      margin-top: 20px;
+
+      color: #6d7882;
+
+      line-height: 1.75;
+
+    }
+
+
+    .tour-benefits {
+
+      display: grid;
+
+      gap: 12px;
+
+      margin-top: 28px;
+
+    }
+
+
+    .tour-benefit {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 14px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 11px;
+
+    }
+
+
+    .tour-benefit-icon {
+
+      width: 40px;
+      height: 40px;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 9px;
+
+      background: #f1e4c8;
+
+    }
+
+
+    .tour-benefit strong {
+
+      display: block;
+
+      font-size: 13px;
+
+    }
+
+
+    .tour-benefit span {
+
+      display: block;
+
+      margin-top: 3px;
+
+      color: #77828b;
+
+      font-size: 11px;
+
+    }
+
+
+    /* =====================================================
+       FORM
+    ===================================================== */
+
+    .tour-form-card {
+
+      padding: 32px;
+
+      background: white;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 22px 60px rgba(0,0,0,.12);
+
+    }
+
+
+    .tour-form-card h3 {
+
+      margin-bottom: 7px;
+
+      font-size: 28px;
+
+    }
+
+
+    .tour-form-card > p {
+
+      margin-bottom: 25px;
+
+      color: #77828b;
+
+      font-size: 13px;
+
+    }
+
+
+    .tour-form-row {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 14px;
+
+    }
+
+
+    .tour-form-group {
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .tour-form-group label {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #293542;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+    }
+
+
+    .tour-form-group input,
+    .tour-form-group select,
+    .tour-form-group textarea {
+
+      width: 100%;
+
+      box-sizing: border-box;
+
+      border: 1px solid #dce2e7;
+
+      border-radius: 9px;
+
+      background: white;
+
+      color: #17222d;
+
+      outline: none;
+
+      font-family: inherit;
+
+    }
+
+
+    .tour-form-group input,
+    .tour-form-group select {
+
+      height: 51px;
+
+      padding: 0 13px;
+
+    }
+
+
+    .tour-form-group textarea {
+
+      min-height: 135px;
+
+      padding: 13px;
+
+      resize: vertical;
+
+    }
+
+
+    .tour-form-group input:focus,
+    .tour-form-group select:focus,
+    .tour-form-group textarea:focus {
+
+      border-color: #c9932f;
+
+      box-shadow:
+        0 0 0 3px rgba(201,147,47,.12);
+
+    }
+
+
+    .tour-form-note {
+
+      margin-top: 12px;
+
+      color: #78838d;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+
+      text-align: center;
+
+    }
+
+
+    /* =====================================================
+       HOW IT WORKS
+    ===================================================== */
+
+    .tour-process {
+
+      background: var(--bg);
+
+    }
+
+
+    .tour-process-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 17px;
+
+      margin-top: 38px;
+
+    }
+
+
+    .tour-process-card {
+
+      padding: 27px 22px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: var(--surface);
+
+    }
+
+
+    .tour-process-number {
+
+      width: 43px;
+      height: 43px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: rgba(217,164,65,.15);
+
+      color: var(--gold-light);
+
+      font-weight: 900;
+
+    }
+
+
+    .tour-process-card h3 {
+
+      margin-top: 18px;
+
+      font-size: 17px;
+
+    }
+
+
+    .tour-process-card p {
+
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.65;
+
+    }
+
+
+    /* =====================================================
+       FINAL CTA
+    ===================================================== */
+
+    .tour-final-cta {
+
+      background:
+        linear-gradient(
+          135deg,
+          #c9932f,
+          #e2b75a
+        );
+
+      color: #111;
+
+      text-align: center;
+
+    }
+
+
+    .tour-final-cta h2 {
+
+      font-size:
+        clamp(35px, 5vw, 55px);
+
+    }
+
+
+    .tour-final-cta p {
+
+      max-width: 620px;
+
+      margin: 17px auto 25px;
+
+      color: rgba(17,17,17,.68);
+
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 1000px) {
+
+      .tour-type-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+
+      .tour-process-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+
+      .tour-intro-grid,
+      .tour-request-layout {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .tour-hero {
+
+        min-height: 470px;
+
+      }
+
+
+      .tour-hero h1 {
+
+        letter-spacing: -1px;
+
+      }
+
+
+      .tour-buttons {
+
+        flex-direction: column;
+
+      }
+
+
+      .tour-type-grid,
+      .tour-process-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .tour-form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+      }
+
+
+      .tour-form-card {
+
+        padding: 23px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <div class="container nav-container">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <span>
+          BALLOW
+        </span>
+
+        <small>
+          CONNECT
+        </small>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="flights.html">
+          Flights
+        </a>
+
+        <a href="cargo.html">
+          Cargo
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a
+          href="tours.html"
+          class="active"
+        >
+          Tours
+        </a>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="tour-hero">
+
+    <div class="container tour-hero-content">
+
+
+      <span class="section-tag">
+        TOURS & PACKAGES
+      </span>
+
+
+      <h1>
+
+        Explore the World.
+        <strong>
+          Create Memories.
+        </strong>
+
+      </h1>
+
+
+      <p>
+
+        From relaxing getaways to exciting adventures,
+        we help you plan the perfect trip to destinations
+        around the world.
+
+      </p>
+
+
+      <div class="tour-buttons">
+
+
+        <a
+          href="#tourRequest"
+          class="btn btn-primary"
+        >
+          ✈️ Plan My Trip
+        </a>
+
+
+        <a
+          href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20would%20like%20help%20planning%20a%20tour."
+          class="btn btn-outline"
+        >
+          💬 WhatsApp Us
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       INTRO
+  ====================================================== -->
+
+  <section class="tour-intro">
+
+    <div class="container tour-intro-grid">
+
+
+      <div>
+
+        <span class="section-tag">
+          EXPERIENCE MORE
+        </span>
+
+
+        <h2>
+
+          Travel Your Way,
+          <strong>
+            We Handle the Rest.
+          </strong>
+
+        </h2>
+
+
+        <p>
+
+          Whether it's a solo trip, family vacation,
+          honeymoon, group tour or business travel,
+          we make planning easy and stress-free.
+
+        </p>
+
+
+        <p>
+
+          Tell us where you want to go and what kind
+          of experience you are looking for. We'll help
+          you create a travel plan that matches your
+          needs and budget.
+
+        </p>
+
+      </div>
+
+
+      <div class="tour-highlight">
+
+        <div class="tour-highlight-icon">
+          🌍
+        </div>
+
+
+        <h3>
+          Travel Beyond Borders
+        </h3>
+
+
+        <p>
+
+          Explore beaches, cities, mountains,
+          cultural destinations and unforgettable
+          experiences with a travel package designed
+          around you.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       TOUR TYPES
+  ====================================================== -->
+
+  <section class="tour-types">
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <span>
+          POPULAR TOUR TYPES
+        </span>
+
+
+        <h2>
+
+          Choose Your
+          <strong>
+            Experience
+          </strong>
+
+        </h2>
+
+
+        <p>
+          Or tell us exactly what you have in mind.
+        </p>
+
+      </div>
+
+
+      <div class="tour-type-grid">
+
+
+        <div class="tour-type">
+
+          <div class="tour-type-icon">
+            🏖️
+          </div>
+
+          <h3>
+            Beach Holidays
+          </h3>
+
+          <p>
+            Relax on beautiful beaches and enjoy
+            a peaceful getaway.
+          </p>
+
+        </div>
+
+
+        <div class="tour-type">
+
+          <div class="tour-type-icon">
+            🏔️
+          </div>
+
+          <h3>
+            Adventure Tours
+          </h3>
+
+          <p>
+            Discover exciting destinations and
+            unforgettable adventures.
+          </p>
+
+        </div>
+
+
+        <div class="tour-type">
+
+          <div class="tour-type-icon">
+            🏙️
+          </div>
+
+          <h3>
+            City Tours
+          </h3>
+
+          <p>
+            Explore famous cities, landmarks,
+            culture and local attractions.
+          </p>
+
+        </div>
+
+
+        <div class="tour-type">
+
+          <div class="tour-type-icon">
+            💕
+          </div>
+
+          <h3>
+            Honeymoon Trips
+          </h3>
+
+          <p>
+            Romantic travel experiences designed
+            for couples.
+          </p>
+
+        </div>
+
+
+        <div class="tour-type">
+
+          <div class="tour-type-icon">
+            👨‍👩‍👧‍👦
+          </div>
+
+          <h3>
+            Family Vacations
+          </h3>
+
+          <p>
+            Comfortable and memorable trips
+            for families of all sizes.
+          </p>
+
+        </div>
+
+
+        <div class="tour-type">
+
+          <div class="tour-type-icon">
+            👥
+          </div>
+
+          <h3>
+            Group Tours
+          </h3>
+
+          <p>
+            Travel with friends, organizations,
+            groups or communities.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       TOUR REQUEST
+  ====================================================== -->
+
+  <section
+    class="tour-request"
+    id="tourRequest"
+  >
+
+    <div class="container tour-request-layout">
+
+
+      <!-- LEFT SIDE -->
+
+      <div class="tour-request-copy">
+
+
+        <span class="section-tag">
+          PLAN YOUR NEXT ADVENTURE
+        </span>
+
+
+        <h2>
+
+          Tell Us Your Dream Trip.
+          <strong>
+            We'll Make It Happen.
+          </strong>
+
+        </h2>
+
+
+        <p>
+
+          Fill out the form with your travel details
+          and preferences. We'll review your request
+          and get back to you with suitable options.
+
+        </p>
+
+
+        <div class="tour-benefits">
+
+
+          <div class="tour-benefit">
+
+            <div class="tour-benefit-icon">
+              🌍
+            </div>
+
+            <div>
+
+              <strong>
+                Any Destination
+              </strong>
+
+              <span>
+                Choose anywhere in the world.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="tour-benefit">
+
+            <div class="tour-benefit-icon">
+              🧳
+            </div>
+
+            <div>
+
+              <strong>
+                Tailored for You
+              </strong>
+
+              <span>
+                We customize the experience to your needs.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="tour-benefit">
+
+            <div class="tour-benefit-icon">
+              🤝
+            </div>
+
+            <div>
+
+              <strong>
+                End-to-End Support
+              </strong>
+
+              <span>
+                From planning to your return.
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FORM -->
+
+      <div class="tour-form-card">
+
+
+        <h3>
+          Request a Tour / Package
+        </h3>
+
+
+        <p>
+          Tell us what you need and we'll contact you.
+        </p>
+
+
+        <form id="tourRequestForm">
+
+
+          <div class="tour-form-row">
+
+
+            <div class="tour-form-group">
+
+              <label for="tourName">
+                Full Name *
+              </label>
+
+              <input
+                type="text"
+                id="tourName"
+                placeholder="Your full name"
+                required
+              >
+
+            </div>
+
+
+            <div class="tour-form-group">
+
+              <label for="tourPhone">
+                Phone / WhatsApp *
+              </label>
+
+              <input
+                type="tel"
+                id="tourPhone"
+                placeholder="+234..."
+                required
+              >
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="tour-form-group">
+
+            <label for="tourDestination">
+              Destination *
+            </label>
+
+            <input
+              type="text"
+              id="tourDestination"
+              placeholder="City, country or multiple destinations"
+              required
+            >
+
+          </div>
+
+
+
+          <div class="tour-form-row">
+
+
+            <div class="tour-form-group">
+
+              <label for="tourFrom">
+                Travel Date *
+              </label>
+
+              <input
+                type="date"
+                id="tourFrom"
+                required
+              >
+
+            </div>
+
+
+            <div class="tour-form-group">
+
+              <label for="tourTo">
+                Return Date
+              </label>
+
+              <input
+                type="date"
+                id="tourTo"
+              >
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="tour-form-row">
+
+
+            <div class="tour-form-group">
+
+              <label for="tourTravelers">
+                Number of Travelers *
+              </label>
+
+              <input
+                type="number"
+                id="tourTravelers"
+                min="1"
+                placeholder="Example: 2"
+                required
+              >
+
+            </div>
+
+
+            <div class="tour-form-group">
+
+              <label for="tourType">
+                Travel Type
+              </label>
+
+              <select id="tourType">
+
+                <option value="">
+                  Select travel type
+                </option>
+
+                <option>
+                  Beach Holiday
+                </option>
+
+                <option>
+                  Adventure Tour
+                </option>
+
+                <option>
+                  City Tour
+                </option>
+
+                <option>
+                  Honeymoon
+                </option>
+
+                <option>
+                  Family Vacation
+                </option>
+
+                <option>
+                  Group Tour
+                </option>
+
+                <option>
+                  Business Travel
+                </option>
+
+                <option>
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="tour-form-row">
+
+
+            <div class="tour-form-group">
+
+              <label for="tourBudget">
+                Budget Range
+              </label>
+
+              <input
+                type="text"
+                id="tourBudget"
+                placeholder="Example: $500 - $1,000"
+              >
+
+            </div>
+
+
+            <div class="tour-form-group">
+
+              <label for="tourPackage">
+                Preferred Package
+              </label>
+
+              <select id="tourPackage">
+
+                <option>
+                  Any Suitable Package
+                </option>
+
+                <option>
+                  Flight + Hotel
+                </option>
+
+                <option>
+                  Hotel + Tours
+                </option>
+
+                <option>
+                  Flight + Hotel + Tours
+                </option>
+
+                <option>
+                  Complete Travel Package
+                </option>
+
+                <option>
+                  Custom Package
+                </option>
+
+              </select>
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="tour-form-group">
+
+            <label for="tourRequests">
+              Tell Us What You Need
+            </label>
+
+            <textarea
+              id="tourRequests"
+              placeholder="Type anything you need: preferred hotel, activities, transportation, flights, places you want to visit, special requirements, number of children, preferred departure city, or anything else..."
+            ></textarea>
+
+          </div>
+
+
+
+          <button
+            type="submit"
+            class="btn btn-primary full-width"
+          >
+            ✈️ Send Tour Request via WhatsApp
+          </button>
+
+
+          <p class="tour-form-note">
+
+            Your request will open WhatsApp and be
+            sent directly to Ballow Connect.
+
+          </p>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       HOW IT WORKS
+  ====================================================== -->
+
+  <section class="tour-process">
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <span>
+          HOW IT WORKS
+        </span>
+
+
+        <h2>
+
+          Your Trip in
+          <strong>
+            Four Steps
+          </strong>
+
+        </h2>
+
+      </div>
+
+
+      <div class="tour-process-grid">
+
+
+        <div class="tour-process-card">
+
+          <div class="tour-process-number">
+            01
+          </div>
+
+          <h3>
+            Send Your Request
+          </h3>
+
+          <p>
+            Tell us your destination, dates,
+            travelers and preferences.
+          </p>
+
+        </div>
+
+
+        <div class="tour-process-card">
+
+          <div class="tour-process-number">
+            02
+          </div>
+
+          <h3>
+            We Find Options
+          </h3>
+
+          <p>
+            Our team searches for suitable
+            tours, hotels, flights and packages.
+          </p>
+
+        </div>
+
+
+        <div class="tour-process-card">
+
+          <div class="tour-process-number">
+            03
+          </div>
+
+          <h3>
+            Review & Choose
+          </h3>
+
+          <p>
+            We share available options and
+            you choose what works for you.
+          </p>
+
+        </div>
+
+
+        <div class="tour-process-card">
+
+          <div class="tour-process-number">
+            04
+          </div>
+
+          <h3>
+            Confirm & Travel
+          </h3>
+
+          <p>
+            Once confirmed, we assist with
+            the remaining travel arrangements.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FINAL CTA
+  ====================================================== -->
+
+  <section class="tour-final-cta">
+
+    <div class="container">
+
+
+      <span class="section-tag">
+        BALLOW CONNECT
+      </span>
+
+
+      <h2>
+        Ready to Explore the World?
+      </h2>
+
+
+      <p>
+        Start your journey today.
+        Your next adventure is just a message away.
+      </p>
+
+
+      <a
+        href="#tourRequest"
+        class="btn btn-dark"
+      >
+        Plan My Trip
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div>
+
+        <div class="logo footer-logo">
+
+          <span>
+            BALLOW
+          </span>
+
+          <small>
+            CONNECT
+          </small>
+
+        </div>
+
+
+        <p>
+          Travel. Ship. Shop. Connect.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Services
+        </h4>
+
+        <a href="flights.html">
+          Flight Booking
+        </a>
+
+        <a href="cargo.html">
+          Cargo Shipping
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="shop.html">
+          Food & Groceries
+        </a>
+
+        <a href="shop.html">
+          Clothing & Fashion
+        </a>
+
+        <a href="shop.html">
+          Cosmetics & Beauty
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="https://wa.me/2347030457948">
+          WhatsApp
+        </a>
+
+        <span>
+          Cairo • Lagos • Worldwide
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <span>
+          © 2026 Ballow Connect. All rights reserved.
+        </span>
+
+        <span>
+          Travel • Cargo • African Shop
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       SCRIPT
+  ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+
+        /* ================================================
+           MOBILE MENU
+        ================================================= */
+
+        const menuToggle =
+          document.getElementById("menuToggle");
+
+        const mainNav =
+          document.getElementById("mainNav");
+
+
+        if (menuToggle && mainNav) {
+
+          menuToggle.addEventListener(
+            "click",
+            function () {
+
+              mainNav.classList.toggle("active");
+
+            }
+          );
+
+
+          mainNav
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+              link.addEventListener(
+                "click",
+                function () {
+
+                  mainNav.classList.remove("active");
+
+                }
+              );
+
+            });
+
+        }
+
+
+        /* ================================================
+           TOUR REQUEST
+        ================================================= */
+
+        const tourForm =
+          document.getElementById("tourRequestForm");
+
+
+        if (tourForm) {
+
+          tourForm.addEventListener(
+            "submit",
+            function (event) {
+
+              event.preventDefault();
+
+
+              const name =
+                document
+                  .getElementById("tourName")
+                  .value
+                  .trim();
+
+
+              const phone =
+                document
+                  .getElementById("tourPhone")
+                  .value
+                  .trim();
+
+
+              const destination =
+                document
+                  .getElementById("tourDestination")
+                  .value
+                  .trim();
+
+
+              const travelFrom =
+                document
+                  .getElementById("tourFrom")
+                  .value;
+
+
+              const travelTo =
+                document
+                  .getElementById("tourTo")
+                  .value;
+
+
+              const travelers =
+                document
+                  .getElementById("tourTravelers")
+                  .value;
+
+
+              const travelType =
+                document
+                  .getElementById("tourType")
+                  .value;
+
+
+              const budget =
+                document
+                  .getElementById("tourBudget")
+                  .value
+                  .trim();
+
+
+              const packageType =
+                document
+                  .getElementById("tourPackage")
+                  .value;
+
+
+              const requests =
+                document
+                  .getElementById("tourRequests")
+                  .value
+                  .trim();
+
+
+              if (
+                !name ||
+                !phone ||
+                !destination ||
+                !travelFrom ||
+                !travelers
+              ) {
+
+                alert(
+                  "Please complete all required information."
+                );
+
+                return;
+
+              }
+
+
+              if (
+                travelTo &&
+                new Date(travelTo) <
+                new Date(travelFrom)
+              ) {
+
+                alert(
+                  "Return date cannot be before the travel date."
+                );
+
+                return;
+
+              }
+
+
+              let message =
+                "Hello Ballow Connect,%0A%0A" +
+
+                "✈️ TOUR / TRAVEL PACKAGE REQUEST%0A%0A" +
+
+                "👤 Name: " +
+                encodeURIComponent(name) +
+
+                "%0A" +
+
+                "📱 Phone / WhatsApp: " +
+                encodeURIComponent(phone) +
+
+                "%0A%0A" +
+
+                "📍 Destination: " +
+                encodeURIComponent(destination) +
+
+                "%0A" +
+
+                "📅 Travel Date: " +
+                encodeURIComponent(travelFrom) +
+
+                "%0A" +
+
+                "📅 Return Date: " +
+                encodeURIComponent(
+                  travelTo || "Not specified"
+                ) +
+
+                "%0A" +
+
+                "👥 Number of Travelers: " +
+                encodeURIComponent(travelers) +
+
+                "%0A%0A" +
+
+                "🌴 Travel Type: " +
+                encodeURIComponent(
+                  travelType || "Not specified"
+                ) +
+
+                "%0A" +
+
+                "💰 Budget: " +
+                encodeURIComponent(
+                  budget || "Not specified"
+                ) +
+
+                "%0A" +
+
+                "📦 Preferred Package: " +
+                encodeURIComponent(packageType);
+
+
+              if (requests) {
+
+                message +=
+                  "%0A%0A" +
+
+                  "📝 Special Requests:%0A" +
+
+                  encodeURIComponent(requests);
+
+              }
+
+
+              message +=
+                "%0A%0APlease provide suitable tour options, packages and prices based on my request.";
+
+
+              const whatsappURL =
+                "https://wa.me/2347030457948?text=" +
+                message;
+
+
+              window.open(
+                whatsappURL,
+                "_blank"
+              );
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
