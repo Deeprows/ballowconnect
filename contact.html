@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Contact Ballow Connect for flight bookings, cargo shipping, hotels, tours, African products and general enquiries."
+  >
+
+  <title>Contact Us | Ballow Connect</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <style>
+
+    /* =========================================
+       BALLOW CONNECT — CONTACT PAGE
+    ========================================= */
+
+    .contact-hero {
+
+      min-height: 430px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4,10,16,.94),
+          rgba(4,10,16,.70),
+          rgba(4,10,16,.38)
+        ),
+        url("icons/contact.jpeg");
+
+      background-size: cover;
+      background-position: center;
+
+    }
+
+
+    .contact-hero-content {
+
+      max-width: 760px;
+
+      padding-top: 45px;
+
+      position: relative;
+      z-index: 2;
+
+    }
+
+
+    .contact-hero h1 {
+
+      margin-top: 14px;
+
+      font-size:
+        clamp(42px, 6vw, 68px);
+
+      line-height: 1;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .contact-hero h1 strong {
+
+      color: var(--gold-light);
+
+    }
+
+
+    .contact-hero p {
+
+      max-width: 650px;
+
+      margin-top: 22px;
+
+      color: #c8d1d9;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================
+       CONTACT CONTENT
+    ========================================= */
+
+    .contact-section {
+
+      background: #f7f9fa;
+
+      color: #111b25;
+
+    }
+
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        .82fr 1.18fr;
+
+      gap: 45px;
+
+      align-items: start;
+
+    }
+
+
+    /* =========================================
+       CONTACT INFORMATION
+    ========================================= */
+
+    .contact-info h2 {
+
+      margin-top: 13px;
+
+      font-size:
+        clamp(35px, 5vw, 52px);
+
+      line-height: 1.05;
+
+    }
+
+
+    .contact-info h2 strong {
+
+      color: #b57f1f;
+
+    }
+
+
+    .contact-info > p {
+
+      margin-top: 19px;
+
+      color: #6d7882;
+
+      line-height: 1.8;
+
+    }
+
+
+    .contact-cards {
+
+      display: grid;
+
+      gap: 13px;
+
+      margin-top: 28px;
+
+    }
+
+
+    .contact-card {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      padding: 17px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 13px;
+
+    }
+
+
+    .contact-card-icon {
+
+      width: 45px;
+      height: 45px;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background: #f1e4c8;
+
+      font-size: 21px;
+
+    }
+
+
+    .contact-card strong {
+
+      display: block;
+
+      font-size: 14px;
+
+    }
+
+
+    .contact-card span {
+
+      display: block;
+
+      margin-top: 4px;
+
+      color: #74808a;
+
+      font-size: 12px;
+
+    }
+
+
+    .contact-card a {
+
+      color: #b57f1f;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+    }
+
+
+    .contact-card a:hover {
+
+      text-decoration: underline;
+
+    }
+
+
+    .contact-whatsapp {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      width: 100%;
+
+      margin-top: 18px;
+
+      padding: 15px 20px;
+
+      border-radius: 10px;
+
+      background: #1fa855;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 800;
+
+      transition: transform .2s ease;
+
+    }
+
+
+    .contact-whatsapp:hover {
+
+      transform: translateY(-2px);
+
+    }
+
+
+    /* =========================================
+       FORM
+    ========================================= */
+
+    .contact-form-card {
+
+      padding: 32px;
+
+      background: white;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 22px 60px rgba(0,0,0,.11);
+
+    }
+
+
+    .contact-form-card h3 {
+
+      font-size: 28px;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .contact-form-card > p {
+
+      color: #77838d;
+
+      font-size: 13px;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .contact-form-row {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 14px;
+
+    }
+
+
+    .contact-form-group {
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .contact-form-group label {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #293542;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+    }
+
+
+    .contact-form-group input,
+    .contact-form-group select,
+    .contact-form-group textarea {
+
+      width: 100%;
+
+      box-sizing: border-box;
+
+      border: 1px solid #dce2e7;
+
+      border-radius: 9px;
+
+      background: white;
+
+      color: #17222d;
+
+      outline: none;
+
+      font-family: inherit;
+
+    }
+
+
+    .contact-form-group input,
+    .contact-form-group select {
+
+      height: 51px;
+
+      padding: 0 13px;
+
+    }
+
+
+    .contact-form-group textarea {
+
+      min-height: 145px;
+
+      padding: 13px;
+
+      resize: vertical;
+
+    }
+
+
+    .contact-form-group input:focus,
+    .contact-form-group select:focus,
+    .contact-form-group textarea:focus {
+
+      border-color: #c9932f;
+
+      box-shadow:
+        0 0 0 3px rgba(201,147,47,.12);
+
+    }
+
+
+    .contact-form-note {
+
+      margin-top: 12px;
+
+      color: #78838d;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+
+      text-align: center;
+
+    }
+
+
+    /* =========================================
+       SERVICES
+    ========================================= */
+
+    .contact-services {
+
+      background: var(--bg);
+
+    }
+
+
+    .contact-service-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+
+      margin-top: 35px;
+
+    }
+
+
+    .contact-service {
+
+      padding: 25px 18px;
+
+      text-align: center;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+    }
+
+
+    .contact-service-icon {
+
+      font-size: 34px;
+
+    }
+
+
+    .contact-service h3 {
+
+      margin-top: 12px;
+
+      font-size: 16px;
+
+    }
+
+
+    .contact-service p {
+
+      margin-top: 7px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* =========================================
+       CTA
+    ========================================= */
+
+    .contact-cta {
+
+      background:
+        linear-gradient(
+          135deg,
+          #c9932f,
+          #e2b75a
+        );
+
+      color: #111;
+
+      text-align: center;
+
+    }
+
+
+    .contact-cta h2 {
+
+      font-size:
+        clamp(34px, 5vw, 52px);
+
+    }
+
+
+    .contact-cta p {
+
+      max-width: 620px;
+
+      margin: 16px auto 25px;
+
+      color: rgba(17,17,17,.68);
+
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 950px) {
+
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .contact-service-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .contact-hero {
+
+        min-height: 430px;
+
+      }
+
+
+      .contact-hero h1 {
+
+        letter-spacing: -1px;
+
+      }
+
+
+      .contact-form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+      }
+
+
+      .contact-form-card {
+
+        padding: 23px;
+
+      }
+
+
+      .contact-service-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+
+    <div class="container nav-container">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <span>
+          BALLOW
+        </span>
+
+        <small>
+          CONNECT
+        </small>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="flights.html">
+          Flights
+        </a>
+
+        <a href="cargo.html">
+          Cargo
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a
+          href="contact.html"
+          class="active"
+        >
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <section class="contact-hero">
+
+    <div class="container contact-hero-content">
+
+
+      <span class="section-tag">
+        CONTACT BALLOW CONNECT
+      </span>
+
+
+      <h1>
+
+        We're Here
+        <strong>
+          To Help.
+        </strong>
+
+      </h1>
+
+
+      <p>
+
+        Have a question, need a quote or want help
+        planning your next trip? Reach out to the
+        Ballow Connect team.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       CONTACT SECTION
+  ========================================== -->
+
+  <section class="contact-section">
+
+    <div class="container contact-grid">
+
+
+      <!-- CONTACT INFORMATION -->
+
+      <div class="contact-info">
+
+
+        <span class="section-tag">
+          GET IN TOUCH
+        </span>
+
+
+        <h2>
+
+          Contact
+          <strong>
+            Us
+          </strong>
+
+        </h2>
+
+
+        <p>
+
+          Contact us for enquiries about flights,
+          cargo shipping, hotels, tours, African
+          products or any of our services.
+
+        </p>
+
+
+        <div class="contact-cards">
+
+
+          <!-- WHATSAPP -->
+
+          <div class="contact-card">
+
+            <div class="contact-card-icon">
+              💬
+            </div>
+
+            <div>
+
+              <strong>
+                WhatsApp
+              </strong>
+
+              <span>
+
+                <a href="https://wa.me/2347030457948">
+                  +234 703 045 7948
+                </a>
+
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- EMAIL -->
+
+          <div class="contact-card">
+
+            <div class="contact-card-icon">
+              ✉️
+            </div>
+
+            <div>
+
+              <strong>
+                Email
+              </strong>
+
+              <span>
+
+                <a href="mailto:ballowconnect@gmail.com">
+                  ballowconnect@gmail.com
+                </a>
+
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- LOCATION -->
+
+          <div class="contact-card">
+
+            <div class="contact-card-icon">
+              📍
+            </div>
+
+            <div>
+
+              <strong>
+                Service Locations
+              </strong>
+
+              <span>
+                Cairo • Lagos • Ghana • China • Worldwide
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SUPPORT -->
+
+          <div class="contact-card">
+
+            <div class="contact-card-icon">
+              🌍
+            </div>
+
+            <div>
+
+              <strong>
+                Worldwide Support
+              </strong>
+
+              <span>
+                Travel and logistics assistance across borders.
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- WHATSAPP BUTTON -->
+
+        <a
+          href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20need%20assistance%20with%20your%20services."
+          class="contact-whatsapp"
+        >
+          💬 Chat With Ballow Connect on WhatsApp
+        </a>
+
+
+      </div>
+
+
+
+      <!-- CONTACT FORM -->
+
+      <div class="contact-form-card">
+
+
+        <h3>
+          Send Us a Message
+        </h3>
+
+
+        <p>
+          Complete the form and we'll send your enquiry
+          directly to our WhatsApp.
+        </p>
+
+
+        <form id="contactForm">
+
+
+          <!-- NAME + PHONE -->
+
+          <div class="contact-form-row">
+
+
+            <div class="contact-form-group">
+
+              <label for="contactName">
+                Full Name *
+              </label>
+
+              <input
+                type="text"
+                id="contactName"
+                placeholder="Your full name"
+                required
+              >
+
+            </div>
+
+
+            <div class="contact-form-group">
+
+              <label for="contactPhone">
+                Phone / WhatsApp *
+              </label>
+
+              <input
+                type="tel"
+                id="contactPhone"
+                placeholder="+234..."
+                required
+              >
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- SERVICE -->
+
+          <div class="contact-form-group">
+
+            <label for="contactService">
+              What Can We Help You With? *
+            </label>
+
+            <select
+              id="contactService"
+              required
+            >
+
+              <option value="">
+                Select a service
+              </option>
+
+              <option>
+                Flight Booking
+              </option>
+
+              <option>
+                Cargo Shipping
+              </option>
+
+              <option>
+                Hotel Reservation
+              </option>
+
+              <option>
+                Tours & Packages
+              </option>
+
+              <option>
+                African Shop
+              </option>
+
+              <option>
+                Visa Assistance
+              </option>
+
+              <option>
+                General Enquiry
+              </option>
+
+              <option>
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- EMAIL + LOCATION -->
+
+          <div class="contact-form-row">
+
+
+            <div class="contact-form-group">
+
+              <label for="contactEmail">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                id="contactEmail"
+                placeholder="you@example.com"
+              >
+
+            </div>
+
+
+            <div class="contact-form-group">
+
+              <label for="contactLocation">
+                Your Location
+              </label>
+
+              <input
+                type="text"
+                id="contactLocation"
+                placeholder="City / Country"
+              >
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- MESSAGE -->
+
+          <div class="contact-form-group">
+
+            <label for="contactMessage">
+              Your Message *
+            </label>
+
+            <textarea
+              id="contactMessage"
+              placeholder="Tell us what you need. You can ask about prices, availability, bookings, cargo, travel, products or anything else..."
+              required
+            ></textarea>
+
+          </div>
+
+
+
+          <!-- SUBMIT -->
+
+          <button
+            type="submit"
+            class="btn btn-primary full-width"
+          >
+            💬 Send Enquiry via WhatsApp
+          </button>
+
+
+          <p class="contact-form-note">
+
+            Clicking the button will open WhatsApp with
+            your enquiry already prepared.
+
+          </p>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       SERVICES
+  ========================================== -->
+
+  <section class="contact-services">
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <span>
+          HOW WE CAN HELP
+        </span>
+
+
+        <h2>
+
+          Contact Us For
+          <strong>
+            Any Service
+          </strong>
+
+        </h2>
+
+
+      </div>
+
+
+      <div class="contact-service-grid">
+
+
+        <div class="contact-service">
+
+          <div class="contact-service-icon">
+            ✈️
+          </div>
+
+          <h3>
+            Flights
+          </h3>
+
+          <p>
+            Flight booking and travel assistance.
+          </p>
+
+        </div>
+
+
+        <div class="contact-service">
+
+          <div class="contact-service-icon">
+            📦
+          </div>
+
+          <h3>
+            Cargo
+          </h3>
+
+          <p>
+            Shipping quotes and cargo enquiries.
+          </p>
+
+        </div>
+
+
+        <div class="contact-service">
+
+          <div class="contact-service-icon">
+            🏨
+          </div>
+
+          <h3>
+            Hotels
+          </h3>
+
+          <p>
+            Accommodation and hotel reservations.
+          </p>
+
+        </div>
+
+
+        <div class="contact-service">
+
+          <div class="contact-service-icon">
+            🌴
+          </div>
+
+          <h3>
+            Tours
+          </h3>
+
+          <p>
+            Customized tours and travel packages.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       CTA
+  ========================================== -->
+
+  <section class="contact-cta">
+
+    <div class="container">
+
+
+      <span class="section-tag">
+        BALLOW CONNECT
+      </span>
+
+
+      <h2>
+        Have a Question?
+      </h2>
+
+
+      <p>
+
+        Don't know which service you need?
+        Simply contact us and tell us what you're
+        looking for. We'll guide you.
+
+      </p>
+
+
+      <a
+        href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20have%20a%20question."
+        class="btn btn-dark"
+      >
+        💬 Talk to Us on WhatsApp
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <!-- BRAND -->
+
+      <div>
+
+        <div class="logo footer-logo">
+
+          <span>
+            BALLOW
+          </span>
+
+          <small>
+            CONNECT
+          </small>
+
+        </div>
+
+
+        <p>
+          Travel. Ship. Shop. Connect.
+        </p>
+
+      </div>
+
+
+
+      <!-- SERVICES -->
+
+      <div>
+
+        <h4>
+          Services
+        </h4>
+
+        <a href="flights.html">
+          Flight Booking
+        </a>
+
+        <a href="cargo.html">
+          Cargo Shipping
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+      </div>
+
+
+
+      <!-- SHOP -->
+
+      <div>
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="shop.html">
+          Food & Groceries
+        </a>
+
+        <a href="shop.html">
+          Clothing & Fashion
+        </a>
+
+        <a href="shop.html">
+          Cosmetics & Beauty
+        </a>
+
+      </div>
+
+
+
+      <!-- CONTACT -->
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="https://wa.me/2347030457948">
+          WhatsApp
+        </a>
+
+        <a href="mailto:ballowconnect@gmail.com">
+          Email Us
+        </a>
+
+        <span>
+          Cairo • Lagos • Worldwide
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <span>
+          © 2026 Ballow Connect. All rights reserved.
+        </span>
+
+        <span>
+          Travel • Cargo • African Shop
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+
+        /* =====================================
+           MOBILE MENU
+        ===================================== */
+
+        const menuToggle =
+          document.getElementById("menuToggle");
+
+        const mainNav =
+          document.getElementById("mainNav");
+
+
+        if (menuToggle && mainNav) {
+
+          menuToggle.addEventListener(
+            "click",
+            function () {
+
+              mainNav.classList.toggle("active");
+
+            }
+          );
+
+
+          mainNav
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+              link.addEventListener(
+                "click",
+                function () {
+
+                  mainNav.classList.remove("active");
+
+                }
+              );
+
+            });
+
+        }
+
+
+
+        /* =====================================
+           CONTACT FORM → WHATSAPP
+        ===================================== */
+
+        const contactForm =
+          document.getElementById("contactForm");
+
+
+        if (contactForm) {
+
+          contactForm.addEventListener(
+            "submit",
+            function (event) {
+
+              event.preventDefault();
+
+
+              const name =
+                document
+                  .getElementById("contactName")
+                  .value
+                  .trim();
+
+
+              const phone =
+                document
+                  .getElementById("contactPhone")
+                  .value
+                  .trim();
+
+
+              const service =
+                document
+                  .getElementById("contactService")
+                  .value;
+
+
+              const email =
+                document
+                  .getElementById("contactEmail")
+                  .value
+                  .trim();
+
+
+              const location =
+                document
+                  .getElementById("contactLocation")
+                  .value
+                  .trim();
+
+
+              const message =
+                document
+                  .getElementById("contactMessage")
+                  .value
+                  .trim();
+
+
+              if (
+                !name ||
+                !phone ||
+                !service ||
+                !message
+              ) {
+
+                alert(
+                  "Please complete all required fields."
+                );
+
+                return;
+
+              }
+
+
+              const whatsappMessage =
+                "Hello Ballow Connect,%0A%0A" +
+
+                "📩 GENERAL ENQUIRY%0A%0A" +
+
+                "👤 Name: " +
+                encodeURIComponent(name) +
+
+                "%0A" +
+
+                "📱 Phone / WhatsApp: " +
+                encodeURIComponent(phone) +
+
+                "%0A" +
+
+                "🔧 Service: " +
+                encodeURIComponent(service) +
+
+                "%0A" +
+
+                "✉️ Email: " +
+                encodeURIComponent(
+                  email || "Not provided"
+                ) +
+
+                "%0A" +
+
+                "📍 Location: " +
+                encodeURIComponent(
+                  location || "Not provided"
+                ) +
+
+                "%0A%0A" +
+
+                "📝 Message:%0A" +
+
+                encodeURIComponent(message) +
+
+                "%0A%0A" +
+
+                "Please assist me with this enquiry.";
+
+
+              const whatsappURL =
+                "https://wa.me/2347030457948?text=" +
+                whatsappMessage;
+
+
+              window.open(
+                whatsappURL,
+                "_blank"
+              );
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
