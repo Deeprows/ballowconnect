@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Ballow African Shop — request African food, clothing, shoes, cosmetics, accessories and more."
+  >
+
+  <title>African Shop | Ballow Connect</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <style>
+
+    /* =====================================================
+       BALLOW AFRICAN SHOP
+    ===================================================== */
+
+    .shop-hero {
+      min-height: 500px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 10, 16, 0.94),
+          rgba(4, 10, 16, 0.68),
+          rgba(4, 10, 16, 0.38)
+        ),
+        url("icons/shop.jpeg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .shop-hero-content {
+      max-width: 760px;
+
+      padding-top: 60px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .shop-hero h1 {
+      margin-top: 14px;
+
+      max-width: 750px;
+
+      font-size: clamp(42px, 6vw, 72px);
+
+      line-height: 0.98;
+
+      letter-spacing: -2px;
+    }
+
+    .shop-hero h1 strong {
+      color: var(--gold-light);
+    }
+
+    .shop-hero p {
+      max-width: 620px;
+
+      margin-top: 23px;
+
+      color: #c5d0da;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+    }
+
+    .shop-hero-buttons {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+
+    /* =====================================================
+       SHOP INTRO
+    ===================================================== */
+
+    .shop-intro {
+      background: #f7f9fa;
+
+      color: #111b25;
+    }
+
+    .shop-intro-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+    .shop-intro h2 {
+      margin-top: 13px;
+
+      font-size: clamp(35px, 5vw, 54px);
+
+      line-height: 1.04;
+    }
+
+    .shop-intro h2 strong {
+      color: #b57f1f;
+    }
+
+    .shop-intro p {
+      margin-top: 20px;
+
+      color: #687580;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       CATEGORY CARDS
+    ===================================================== */
+
+    .shop-categories {
+      background: var(--bg);
+    }
+
+    .shop-category-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 14px;
+
+      margin-top: 38px;
+    }
+
+    .shop-category {
+      min-height: 145px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 18px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: var(--surface);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .shop-category:hover {
+      transform: translateY(-5px);
+
+      border-color: var(--gold);
+    }
+
+    .shop-category-icon {
+      font-size: 34px;
+    }
+
+    .shop-category h3 {
+      margin-top: 12px;
+
+      font-size: 14px;
+    }
+
+    .shop-category p {
+      margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+    }
+
+
+    /* =====================================================
+       REQUEST SECTION
+    ===================================================== */
+
+    .shop-request {
+      background: #f6f8fa;
+
+      color: #111b25;
+    }
+
+    .shop-request-layout {
+      display: grid;
+
+      grid-template-columns:
+        0.72fr 1.28fr;
+
+      gap: 45px;
+
+      align-items: start;
+    }
+
+    .shop-request-copy h2 {
+      margin-top: 13px;
+
+      font-size: clamp(35px, 5vw, 55px);
+
+      line-height: 1.03;
+    }
+
+    .shop-request-copy h2 strong {
+      color: #b57f1f;
+    }
+
+    .shop-request-copy > p {
+      margin-top: 20px;
+
+      color: #6d7882;
+
+      line-height: 1.75;
+    }
+
+    .shop-benefits {
+      margin-top: 28px;
+
+      display: grid;
+
+      gap: 12px;
+    }
+
+    .shop-benefit {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 14px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 11px;
+    }
+
+    .shop-benefit-icon {
+      width: 39px;
+      height: 39px;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 9px;
+
+      background: #f1e4c8;
+    }
+
+    .shop-benefit strong {
+      display: block;
+
+      font-size: 13px;
+    }
+
+    .shop-benefit span {
+      display: block;
+
+      margin-top: 3px;
+
+      color: #77828b;
+
+      font-size: 11px;
+    }
+
+
+    /* =====================================================
+       SHOP FORM
+    ===================================================== */
+
+    .shop-form-card {
+      padding: 32px;
+
+      background: white;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 22px 60px rgba(0,0,0,0.12);
+    }
+
+    .shop-form-card h3 {
+      font-size: 28px;
+
+      margin-bottom: 7px;
+    }
+
+    .shop-form-card > p {
+      margin-bottom: 25px;
+
+      color: #77828b;
+
+      font-size: 13px;
+    }
+
+    .shop-form-row {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 14px;
+
+      margin-bottom: 15px;
+    }
+
+    .shop-form-group {
+      margin-bottom: 15px;
+    }
+
+    .shop-form-group label {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #293542;
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+    .shop-form-group input,
+    .shop-form-group select,
+    .shop-form-group textarea {
+      width: 100%;
+
+      border: 1px solid #dce2e7;
+
+      border-radius: 9px;
+
+      background: #fff;
+
+      color: #17222d;
+
+      outline: none;
+
+      font-family: inherit;
+    }
+
+    .shop-form-group input,
+    .shop-form-group select {
+      height: 51px;
+
+      padding: 0 13px;
+    }
+
+    .shop-form-group textarea {
+      min-height: 135px;
+
+      padding: 13px;
+
+      resize: vertical;
+    }
+
+    .shop-form-group input:focus,
+    .shop-form-group select:focus,
+    .shop-form-group textarea:focus {
+      border-color: #c9932f;
+
+      box-shadow:
+        0 0 0 3px rgba(201,147,47,0.12);
+    }
+
+    .shop-form-note {
+      margin-top: 12px;
+
+      color: #78838d;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       HOW IT WORKS
+    ===================================================== */
+
+    .shop-how {
+      background: var(--bg);
+    }
+
+    .shop-how-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 17px;
+
+      margin-top: 38px;
+    }
+
+    .shop-how-card {
+      padding: 27px 22px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: var(--surface);
+    }
+
+    .shop-how-number {
+      width: 43px;
+      height: 43px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: rgba(217,164,65,0.15);
+
+      color: var(--gold-light);
+
+      font-weight: 900;
+    }
+
+    .shop-how-card h3 {
+      margin-top: 18px;
+
+      font-size: 17px;
+    }
+
+    .shop-how-card p {
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .shop-final-cta {
+      background:
+        linear-gradient(
+          135deg,
+          #c9932f,
+          #e2b75a
+        );
+
+      color: #111;
+
+      text-align: center;
+    }
+
+    .shop-final-cta h2 {
+      font-size: clamp(35px, 5vw, 55px);
+    }
+
+    .shop-final-cta p {
+      max-width: 620px;
+
+      margin: 17px auto 25px;
+
+      color: rgba(17,17,17,0.68);
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 1000px) {
+
+      .shop-category-grid {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+      .shop-how-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .shop-intro-grid,
+      .shop-request-layout {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .shop-hero {
+        min-height: 470px;
+      }
+
+      .shop-hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .shop-hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .shop-category-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .shop-how-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .shop-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .shop-form-card {
+        padding: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <div class="container nav-container">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <span>
+          BALLOW
+        </span>
+
+        <small>
+          CONNECT
+        </small>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="flights.html">
+          Flights
+        </a>
+
+        <a href="cargo.html">
+          Cargo
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+        <a
+          href="shop.html"
+          class="active"
+        >
+          African Shop
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="shop-hero">
+
+    <div class="container shop-hero-content">
+
+      <span class="section-tag">
+        BALLOW AFRICAN SHOP
+      </span>
+
+      <h1>
+        Find What You Need.
+        <strong>We'll Help You Get It.</strong>
+      </h1>
+
+      <p>
+        Looking for African food, clothing, shoes,
+        cosmetics, beauty products, accessories or
+        something special? Tell us what you need and
+        we'll help you find it.
+      </p>
+
+      <div class="shop-hero-buttons">
+
+        <a
+          href="#shoppingRequest"
+          class="btn btn-primary"
+        >
+          🛒 Start Your Request
+        </a>
+
+        <a
+          href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20would%20like%20to%20make%20an%20African%20Shop%20request."
+          class="btn btn-outline"
+        >
+          💬 WhatsApp Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       INTRO
+  ====================================================== -->
+
+  <section class="shop-intro">
+
+    <div class="container shop-intro-grid">
+
+
+      <div>
+
+        <span class="section-tag">
+          SHOP WITH BALLOW
+        </span>
+
+        <h2>
+          More Than a Shop.
+          <strong>A Shopping Service.</strong>
+        </h2>
+
+        <p>
+          Ballow African Shop helps customers request
+          the products they need without having to search
+          through a complicated catalogue.
+        </p>
+
+        <p>
+          Simply tell us what you are looking for.
+          It can be food, fashion, footwear, cosmetics,
+          personal care products, accessories, electronics,
+          household items or almost anything else.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Can't find what you're looking for?
+        </h3>
+
+        <p>
+          No problem. Our open shopping request system
+          allows you to describe exactly what you need,
+          including brand, size, colour, quantity and
+          preferred budget.
+        </p>
+
+        <a
+          href="#shoppingRequest"
+          class="btn btn-primary"
+        >
+          Tell Us What You Need
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CATEGORIES
+  ====================================================== -->
+
+  <section class="shop-categories">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>
+          SHOP CATEGORIES
+        </span>
+
+        <h2>
+          What Are You
+          <strong>Looking For?</strong>
+        </h2>
+
+        <p>
+          These are examples. You can request
+          anything you need.
+        </p>
+
+      </div>
+
+
+      <div class="shop-category-grid">
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            🍚
+          </div>
+
+          <h3>
+            Food & Groceries
+          </h3>
+
+          <p>
+            African food, grains, oils & more
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            👗
+          </div>
+
+          <h3>
+            Clothing & Fashion
+          </h3>
+
+          <p>
+            Dresses, shirts, trousers & wears
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            👟
+          </div>
+
+          <h3>
+            Shoes & Footwear
+          </h3>
+
+          <p>
+            Sneakers, sandals, formal shoes
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            💄
+          </div>
+
+          <h3>
+            Cosmetics & Beauty
+          </h3>
+
+          <p>
+            Beauty, hair & skincare products
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            👜
+          </div>
+
+          <h3>
+            Bags & Accessories
+          </h3>
+
+          <p>
+            Bags, watches, jewellery & more
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            🧴
+          </div>
+
+          <h3>
+            Personal Care
+          </h3>
+
+          <p>
+            Everyday personal care products
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            👶
+          </div>
+
+          <h3>
+            Baby & Kids
+          </h3>
+
+          <p>
+            Children's clothing & products
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            🏠
+          </div>
+
+          <h3>
+            Home Items
+          </h3>
+
+          <p>
+            Household products & essentials
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            📱
+          </div>
+
+          <h3>
+            Electronics
+          </h3>
+
+          <p>
+            Devices, accessories & gadgets
+          </p>
+
+        </div>
+
+
+        <div class="shop-category">
+
+          <div class="shop-category-icon">
+            🎁
+          </div>
+
+          <h3>
+            Gifts & Other
+          </h3>
+
+          <p>
+            Special requests & unique items
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SHOPPING REQUEST
+  ====================================================== -->
+
+  <section
+    class="shop-request"
+    id="shoppingRequest"
+  >
+
+    <div class="container shop-request-layout">
+
+
+      <!-- LEFT -->
+
+      <div class="shop-request-copy">
+
+        <span class="section-tag">
+          SHOPPING REQUEST
+        </span>
+
+        <h2>
+          Tell Us
+          <strong>What You Need.</strong>
+        </h2>
+
+        <p>
+          Don't worry if you cannot find a specific
+          product on this page. Just describe what you
+          want and our team will help you source it.
+        </p>
+
+
+        <div class="shop-benefits">
+
+
+          <div class="shop-benefit">
+
+            <div class="shop-benefit-icon">
+              🔎
+            </div>
+
+            <div>
+
+              <strong>
+                We search for you
+              </strong>
+
+              <span>
+                Tell us the exact item you're looking for.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="shop-benefit">
+
+            <div class="shop-benefit-icon">
+              💰
+            </div>
+
+            <div>
+
+              <strong>
+                Get availability & pricing
+              </strong>
+
+              <span>
+                We'll confirm available options and prices.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="shop-benefit">
+
+            <div class="shop-benefit-icon">
+              📱
+            </div>
+
+            <div>
+
+              <strong>
+                Easy WhatsApp communication
+              </strong>
+
+              <span>
+                Your request goes directly to our team.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="shop-benefit">
+
+            <div class="shop-benefit-icon">
+              🌍
+            </div>
+
+            <div>
+
+              <strong>
+                Delivery support
+              </strong>
+
+              <span>
+                Tell us where you want your order delivered.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FORM -->
+
+      <div class="shop-form-card">
+
+        <h3>
+          Make a Shopping Request
+        </h3>
+
+        <p>
+          The more details you provide, the easier it
+          will be for us to find the right item.
+        </p>
+
+
+        <form id="shopRequestForm">
+
+
+          <div class="shop-form-row">
+
+            <div class="shop-form-group">
+
+              <label for="shopName">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="shopName"
+                placeholder="Your full name"
+                required
+              >
+
+            </div>
+
+
+            <div class="shop-form-group">
+
+              <label for="shopPhone">
+                Phone / WhatsApp
+              </label>
+
+              <input
+                type="tel"
+                id="shopPhone"
+                placeholder="+234..."
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="shop-form-group">
+
+            <label for="shopCategory">
+              Category
+            </label>
+
+            <select
+              id="shopCategory"
+              required
+            >
+
+              <option value="">
+                Select a category
+              </option>
+
+              <option>
+                Food & Groceries
+              </option>
+
+              <option>
+                Clothing & Fashion
+              </option>
+
+              <option>
+                Shoes & Footwear
+              </option>
+
+              <option>
+                Cosmetics & Beauty
+              </option>
+
+              <option>
+                Bags & Accessories
+              </option>
+
+              <option>
+                Personal Care
+              </option>
+
+              <option>
+                Baby & Kids
+              </option>
+
+              <option>
+                Home Items
+              </option>
+
+              <option>
+                Electronics
+              </option>
+
+              <option>
+                Gifts
+              </option>
+
+              <option>
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="shop-form-group">
+
+            <label for="shopProduct">
+              What do you need?
+            </label>
+
+            <textarea
+              id="shopProduct"
+              placeholder="Example: 2 bags of Nigerian rice, 1 bottle of palm oil, men's black shoes size 44, women's Ankara dresses size L..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <div class="shop-form-row">
+
+            <div class="shop-form-group">
+
+              <label for="shopQuantity">
+                Quantity
+              </label>
+
+              <input
+                type="text"
+                id="shopQuantity"
+                placeholder="Example: 2"
+              >
+
+            </div>
+
+
+            <div class="shop-form-group">
+
+              <label for="shopSize">
+                Size / Colour / Preference
+              </label>
+
+              <input
+                type="text"
+                id="shopSize"
+                placeholder="Example: XL, black"
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="shop-form-row">
+
+            <div class="shop-form-group">
+
+              <label for="shopBrand">
+                Preferred Brand
+              </label>
+
+              <input
+                type="text"
+                id="shopBrand"
+                placeholder="Optional"
+              >
+
+            </div>
+
+
+            <div class="shop-form-group">
+
+              <label for="shopBudget">
+                Approximate Budget
+              </label>
+
+              <input
+                type="text"
+                id="shopBudget"
+                placeholder="Optional"
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="shop-form-group">
+
+            <label for="shopLocation">
+              Delivery Location
+            </label>
+
+            <input
+              type="text"
+              id="shopLocation"
+              placeholder="City / Country"
+              required
+            >
+
+          </div>
+
+
+          <div class="shop-form-group">
+
+            <label for="shopMessage">
+              Additional Information
+            </label>
+
+            <textarea
+              id="shopMessage"
+              placeholder="Anything else we should know?"
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary full-width"
+          >
+            🛒 Send Shopping Request
+          </button>
+
+
+          <p class="shop-form-note">
+            Your request will open WhatsApp and be sent
+            directly to Ballow Connect.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       HOW IT WORKS
+  ====================================================== -->
+
+  <section class="shop-how">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>
+          SIMPLE PROCESS
+        </span>
+
+        <h2>
+          How Shopping
+          <strong>Works</strong>
+        </h2>
+
+      </div>
+
+
+      <div class="shop-how-grid">
+
+
+        <div class="shop-how-card">
+
+          <div class="shop-how-number">
+            01
+          </div>
+
+          <h3>
+            Tell Us What You Need
+          </h3>
+
+          <p>
+            Describe the product, quantity, size,
+            colour, brand or other preferences.
+          </p>
+
+        </div>
+
+
+        <div class="shop-how-card">
+
+          <div class="shop-how-number">
+            02
+          </div>
+
+          <h3>
+            We Find It
+          </h3>
+
+          <p>
+            Our team checks available products
+            and sourcing options.
+          </p>
+
+        </div>
+
+
+        <div class="shop-how-card">
+
+          <div class="shop-how-number">
+            03
+          </div>
+
+          <h3>
+            Confirm Your Order
+          </h3>
+
+          <p>
+            We'll discuss the available item,
+            price and delivery arrangements with you.
+          </p>
+
+        </div>
+
+
+        <div class="shop-how-card">
+
+          <div class="shop-how-number">
+            04
+          </div>
+
+          <h3>
+            Receive Your Order
+          </h3>
+
+          <p>
+            Once confirmed and processed, your order
+            can be arranged for delivery.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CTA
+  ====================================================== -->
+
+  <section class="shop-final-cta">
+
+    <div class="container">
+
+      <span class="section-tag">
+        BALLOW AFRICAN SHOP
+      </span>
+
+      <h2>
+        Looking for Something Special?
+      </h2>
+
+      <p>
+        Tell us what you need. We will do our best
+        to help you find it.
+      </p>
+
+      <a
+        href="#shoppingRequest"
+        class="btn btn-dark"
+      >
+        Start Shopping Request
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div>
+
+        <div class="logo footer-logo">
+
+          <span>
+            BALLOW
+          </span>
+
+          <small>
+            CONNECT
+          </small>
+
+        </div>
+
+        <p>
+          Travel. Ship. Shop. Connect.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Services
+        </h4>
+
+        <a href="flights.html">
+          Flight Booking
+        </a>
+
+        <a href="cargo.html">
+          Cargo Shipping
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="shop.html">
+          Food & Groceries
+        </a>
+
+        <a href="shop.html">
+          Fashion
+        </a>
+
+        <a href="shop.html">
+          Cosmetics
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="https://wa.me/2347030457948">
+          WhatsApp
+        </a>
+
+        <span>
+          Cairo • Lagos • Worldwide
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <span>
+          © 2026 Ballow Connect. All rights reserved.
+        </span>
+
+        <span>
+          Travel • Cargo • African Shop
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       SHOP SCRIPT
+  ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+
+        /* ================================================
+           MOBILE NAVIGATION
+        ================================================= */
+
+        const menuToggle =
+          document.getElementById("menuToggle");
+
+        const mainNav =
+          document.getElementById("mainNav");
+
+
+        if (menuToggle && mainNav) {
+
+          menuToggle.addEventListener(
+            "click",
+            function () {
+
+              mainNav.classList.toggle("active");
+
+            }
+          );
+
+
+          mainNav
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+              link.addEventListener(
+                "click",
+                function () {
+
+                  mainNav.classList.remove("active");
+
+                }
+              );
+
+            });
+
+        }
+
+
+        /* ================================================
+           SHOPPING REQUEST
+        ================================================= */
+
+        const shopForm =
+          document.getElementById("shopRequestForm");
+
+
+        if (shopForm) {
+
+          shopForm.addEventListener(
+            "submit",
+            function (event) {
+
+              event.preventDefault();
+
+
+              const name =
+                document
+                  .getElementById("shopName")
+                  .value
+                  .trim();
+
+
+              const phone =
+                document
+                  .getElementById("shopPhone")
+                  .value
+                  .trim();
+
+
+              const category =
+                document
+                  .getElementById("shopCategory")
+                  .value;
+
+
+              const product =
+                document
+                  .getElementById("shopProduct")
+                  .value
+                  .trim();
+
+
+              const quantity =
+                document
+                  .getElementById("shopQuantity")
+                  .value
+                  .trim();
+
+
+              const size =
+                document
+                  .getElementById("shopSize")
+                  .value
+                  .trim();
+
+
+              const brand =
+                document
+                  .getElementById("shopBrand")
+                  .value
+                  .trim();
+
+
+              const budget =
+                document
+                  .getElementById("shopBudget")
+                  .value
+                  .trim();
+
+
+              const location =
+                document
+                  .getElementById("shopLocation")
+                  .value
+                  .trim();
+
+
+              const additionalMessage =
+                document
+                  .getElementById("shopMessage")
+                  .value
+                  .trim();
+
+
+              if (
+                !name ||
+                !phone ||
+                !category ||
+                !product ||
+                !location
+              ) {
+
+                alert(
+                  "Please complete the required information."
+                );
+
+                return;
+
+              }
+
+
+              let message =
+                "Hello Ballow Connect,%0A%0A" +
+
+                "🛒 AFRICAN SHOP REQUEST%0A%0A" +
+
+                "👤 Name: " +
+                encodeURIComponent(name) +
+
+                "%0A" +
+
+                "📱 Phone / WhatsApp: " +
+                encodeURIComponent(phone) +
+
+                "%0A%0A" +
+
+                "📂 Category: " +
+                encodeURIComponent(category) +
+
+                "%0A%0A" +
+
+                "🛍️ What I Need:%0A" +
+                encodeURIComponent(product) +
+
+                "%0A%0A" +
+
+                "🔢 Quantity: " +
+                encodeURIComponent(
+                  quantity || "Not specified"
+                ) +
+
+                "%0A" +
+
+                "📏 Size / Colour / Preference: " +
+                encodeURIComponent(
+                  size || "Not specified"
+                ) +
+
+                "%0A" +
+
+                "🏷️ Preferred Brand: " +
+                encodeURIComponent(
+                  brand || "Any"
+                ) +
+
+                "%0A" +
+
+                "💰 Budget: " +
+                encodeURIComponent(
+                  budget || "Not specified"
+                ) +
+
+                "%0A%0A" +
+
+                "📍 Delivery Location: " +
+                encodeURIComponent(location);
+
+
+              if (additionalMessage) {
+
+                message +=
+                  "%0A%0A" +
+                  "📝 Additional Information:%0A" +
+                  encodeURIComponent(
+                    additionalMessage
+                  );
+
+              }
+
+
+              message +=
+                "%0A%0APlease let me know the available options and price.";
+
+
+              const whatsappURL =
+                "https://wa.me/2347030457948?text=" +
+                message;
+
+
+              window.open(
+                whatsappURL,
+                "_blank"
+              );
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
