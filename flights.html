@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Book flights with Ballow Connect. Get assistance with local and international flight bookings, travel planning and visa support."
+  >
+
+  <title>Flight Booking | Ballow Connect</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <style>
+
+    /* =====================================================
+       FLIGHT PAGE
+    ===================================================== */
+
+    .page-hero {
+      min-height: 470px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(3,9,16,0.94),
+          rgba(3,9,16,0.62),
+          rgba(3,9,16,0.35)
+        ),
+        url("icons/hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .page-hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      padding-top: 70px;
+
+      max-width: 760px;
+    }
+
+    .page-hero h1 {
+      margin-top: 14px;
+
+      font-size: clamp(42px, 6vw, 70px);
+
+      line-height: 1;
+
+      letter-spacing: -2px;
+    }
+
+    .page-hero h1 strong {
+      color: var(--gold-light);
+    }
+
+    .page-hero p {
+      max-width: 620px;
+
+      margin-top: 22px;
+
+      color: #c8d2dc;
+
+      font-size: 17px;
+    }
+
+
+    /* =====================================================
+       BOOKING AREA
+    ===================================================== */
+
+    .flight-booking {
+      background: #f6f8fa;
+
+      color: #101923;
+    }
+
+    .flight-layout {
+      display: grid;
+
+      grid-template-columns:
+        1.15fr 0.85fr;
+
+      gap: 35px;
+
+      align-items: start;
+    }
+
+
+    /* =====================================================
+       FORM CARD
+    ===================================================== */
+
+    .flight-form-card {
+      padding: 35px;
+
+      background: #ffffff;
+
+      border: 1px solid #e2e7eb;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 20px 55px rgba(10,25,40,0.08);
+    }
+
+    .flight-form-card h2 {
+      font-size: 30px;
+
+      margin-bottom: 8px;
+    }
+
+    .flight-form-card > p {
+      color: #6d7884;
+
+      font-size: 14px;
+
+      margin-bottom: 28px;
+    }
+
+
+    /* =====================================================
+       TRIP TYPE
+    ===================================================== */
+
+    .flight-trip-type {
+      display: flex;
+
+      gap: 8px;
+
+      margin-bottom: 25px;
+
+      padding: 5px;
+
+      background: #f0f3f5;
+
+      border-radius: 10px;
+    }
+
+    .flight-trip-type button {
+      flex: 1;
+
+      height: 44px;
+
+      border: 0;
+
+      border-radius: 7px;
+
+      background: transparent;
+
+      color: #687582;
+
+      font-size: 13px;
+
+      font-weight: 800;
+    }
+
+    .flight-trip-type button.active {
+      background: var(--gold);
+
+      color: #111;
+    }
+
+
+    /* =====================================================
+       FORM
+    ===================================================== */
+
+    .flight-form-row {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 15px;
+
+      margin-bottom: 16px;
+    }
+
+    .flight-form-group label {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #273442;
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+    .flight-form-group input,
+    .flight-form-group select {
+      width: 100%;
+
+      height: 52px;
+
+      padding: 0 14px;
+
+      border: 1px solid #dce2e7;
+
+      border-radius: 9px;
+
+      background: #ffffff;
+
+      color: #15202c;
+
+      outline: none;
+    }
+
+    .flight-form-group input:focus,
+    .flight-form-group select:focus {
+      border-color: var(--gold);
+
+      box-shadow:
+        0 0 0 3px rgba(217,164,65,0.12);
+    }
+
+    .flight-form-help {
+      margin-top: 12px;
+
+      color: #78838e;
+
+      font-size: 12px;
+    }
+
+
+    /* =====================================================
+       SIDE INFORMATION
+    ===================================================== */
+
+    .flight-info-card {
+      padding: 35px;
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #0c1c2e,
+          #07111f
+        );
+
+      color: var(--white);
+
+      box-shadow: var(--shadow);
+    }
+
+    .flight-info-card h2 {
+      font-size: 29px;
+
+      line-height: 1.1;
+
+      margin: 12px 0 17px;
+    }
+
+    .flight-info-card h2 strong {
+      color: var(--gold-light);
+    }
+
+    .flight-info-card > p {
+      color: #aebdca;
+
+      font-size: 14px;
+    }
+
+
+    /* =====================================================
+       INFO ITEMS
+    ===================================================== */
+
+    .flight-info-list {
+      margin-top: 28px;
+
+      display: grid;
+
+      gap: 15px;
+    }
+
+    .flight-info-item {
+      display: flex;
+
+      gap: 14px;
+
+      padding: 15px;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      border-radius: 12px;
+
+      background: rgba(255,255,255,0.04);
+    }
+
+    .flight-info-item-icon {
+      width: 40px;
+      height: 40px;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background: rgba(217,164,65,0.14);
+
+      font-size: 19px;
+    }
+
+    .flight-info-item h3 {
+      font-size: 14px;
+
+      margin-bottom: 3px;
+    }
+
+    .flight-info-item p {
+      color: #9eacb9;
+
+      font-size: 12px;
+    }
+
+
+    /* =====================================================
+       POPULAR ROUTES
+    ===================================================== */
+
+    .popular-routes {
+      background: var(--bg);
+    }
+
+    .route-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+    .route-card {
+      padding: 25px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: var(--surface);
+
+      transition: 0.25s ease;
+    }
+
+    .route-card:hover {
+      transform: translateY(-4px);
+
+      border-color: var(--gold);
+    }
+
+    .route-card span {
+      color: var(--gold-light);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+    }
+
+    .route-card h3 {
+      margin-top: 12px;
+
+      font-size: 20px;
+    }
+
+    .route-card p {
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+
+    /* =====================================================
+       VISA SECTION
+    ===================================================== */
+
+    .visa-section {
+      background: #f6f8fa;
+
+      color: #101923;
+    }
+
+    .visa-content {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .visa-content h2 {
+      margin-top: 12px;
+
+      font-size: clamp(34px, 5vw, 52px);
+
+      line-height: 1.05;
+    }
+
+    .visa-content h2 strong {
+      color: #b47f1d;
+    }
+
+    .visa-content p {
+      margin-top: 20px;
+
+      color: #697580;
+    }
+
+    .visa-list {
+      display: grid;
+
+      gap: 12px;
+
+      margin-top: 25px;
+    }
+
+    .visa-list div {
+      padding: 17px;
+
+      background: white;
+
+      border: 1px solid #e3e7ea;
+
+      border-radius: 11px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+
+    /* =====================================================
+       FLIGHT CTA
+    ===================================================== */
+
+    .flight-cta {
+      background:
+        linear-gradient(
+          135deg,
+          #c9932f,
+          #e4b95b
+        );
+
+      color: #111;
+
+      text-align: center;
+    }
+
+    .flight-cta h2 {
+      font-size: clamp(35px, 5vw, 55px);
+
+      line-height: 1;
+    }
+
+    .flight-cta p {
+      margin: 18px auto 25px;
+
+      max-width: 580px;
+
+      color: rgba(17,17,17,0.68);
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 850px) {
+
+      .flight-layout,
+      .visa-content {
+        grid-template-columns: 1fr;
+      }
+
+      .route-grid {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 550px) {
+
+      .page-hero {
+        min-height: 430px;
+      }
+
+      .flight-form-card,
+      .flight-info-card {
+        padding: 23px;
+      }
+
+      .flight-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .route-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <div class="container nav-container">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+        <span>BALLOW</span>
+        <small>CONNECT</small>
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="flights.html">
+          Flights
+        </a>
+
+        <a href="cargo.html">
+          Cargo
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       PAGE HERO
+  ====================================================== -->
+
+  <section class="page-hero">
+
+    <div class="container page-hero-content">
+
+      <span class="section-tag">
+        BALLOW TRAVEL BOOKING
+      </span>
+
+      <h1>
+        Your Journey
+        <strong>Starts Here.</strong>
+      </h1>
+
+      <p>
+        Tell us where you want to go and when you want
+        to travel. Our team will help you find suitable
+        flight options and guide you through the booking
+        process.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       BOOKING
+  ====================================================== -->
+
+  <section class="flight-booking">
+
+    <div class="container flight-layout">
+
+
+      <!-- FORM -->
+
+      <div class="flight-form-card">
+
+        <h2>
+          Request a Flight
+        </h2>
+
+        <p>
+          Complete the form and send your request
+          directly to our travel team.
+        </p>
+
+
+        <div class="flight-trip-type">
+
+          <button
+            type="button"
+            class="active"
+            id="roundTripBtn"
+          >
+            Round Trip
+          </button>
+
+          <button
+            type="button"
+            id="oneWayBtn"
+          >
+            One Way
+          </button>
+
+        </div>
+
+
+        <form id="fullFlightForm">
+
+
+          <div class="flight-form-row">
+
+            <div class="flight-form-group">
+
+              <label for="flightFrom">
+                From
+              </label>
+
+              <input
+                type="text"
+                id="flightFrom"
+                placeholder="Cairo"
+                required
+              >
+
+            </div>
+
+
+            <div class="flight-form-group">
+
+              <label for="flightTo">
+                To
+              </label>
+
+              <input
+                type="text"
+                id="flightTo"
+                placeholder="Lagos"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="flight-form-row">
+
+            <div class="flight-form-group">
+
+              <label for="departureDate">
+                Departure Date
+              </label>
+
+              <input
+                type="date"
+                id="departureDate"
+                required
+              >
+
+            </div>
+
+
+            <div
+              class="flight-form-group"
+              id="returnDateGroup"
+            >
+
+              <label for="returnDate">
+                Return Date
+              </label>
+
+              <input
+                type="date"
+                id="returnDate"
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="flight-form-row">
+
+            <div class="flight-form-group">
+
+              <label for="passengers">
+                Passengers
+              </label>
+
+              <select id="passengers">
+
+                <option value="1 Adult">
+                  1 Adult
+                </option>
+
+                <option value="2 Adults">
+                  2 Adults
+                </option>
+
+                <option value="3 Adults">
+                  3 Adults
+                </option>
+
+                <option value="4 Adults">
+                  4 Adults
+                </option>
+
+                <option value="5 Adults">
+                  5 Adults
+                </option>
+
+                <option value="6+ Adults">
+                  6+ Adults
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="flight-form-group">
+
+              <label for="travelClass">
+                Travel Class
+              </label>
+
+              <select id="travelClass">
+
+                <option>
+                  Economy
+                </option>
+
+                <option>
+                  Premium Economy
+                </option>
+
+                <option>
+                  Business
+                </option>
+
+                <option>
+                  First Class
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="flight-form-row">
+
+            <div class="flight-form-group">
+
+              <label for="travellerName">
+                Traveller Name
+              </label>
+
+              <input
+                type="text"
+                id="travellerName"
+                placeholder="Full name"
+                required
+              >
+
+            </div>
+
+
+            <div class="flight-form-group">
+
+              <label for="travellerPhone">
+                Phone / WhatsApp
+              </label>
+
+              <input
+                type="tel"
+                id="travellerPhone"
+                placeholder="+20..."
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary full-width"
+          >
+            ✈️ Send Flight Request
+          </button>
+
+
+          <p class="flight-form-help">
+            Your request will open WhatsApp with your
+            travel details ready to send to Ballow Connect.
+          </p>
+
+        </form>
+
+      </div>
+
+
+
+      <!-- INFORMATION -->
+
+      <div class="flight-info-card">
+
+        <span class="section-tag">
+          TRAVEL WITH CONFIDENCE
+        </span>
+
+        <h2>
+          We Make Travel
+          <strong>Simple.</strong>
+        </h2>
+
+        <p>
+          Whether you're travelling for business,
+          vacation, family visits or relocation,
+          Ballow Connect is here to assist you.
+        </p>
+
+
+        <div class="flight-info-list">
+
+
+          <div class="flight-info-item">
+
+            <div class="flight-info-item-icon">
+              ✈️
+            </div>
+
+            <div>
+
+              <h3>
+                Local & International Flights
+              </h3>
+
+              <p>
+                Tell us your preferred route and
+                travel dates.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="flight-info-item">
+
+            <div class="flight-info-item-icon">
+              💰
+            </div>
+
+            <div>
+
+              <h3>
+                Competitive Options
+              </h3>
+
+              <p>
+                We help you find suitable options
+                based on your requirements.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="flight-info-item">
+
+            <div class="flight-info-item-icon">
+              📄
+            </div>
+
+            <div>
+
+              <h3>
+                Travel Assistance
+              </h3>
+
+              <p>
+                Get support with your travel planning
+                and documentation.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="flight-info-item">
+
+            <div class="flight-info-item-icon">
+              💬
+            </div>
+
+            <div>
+
+              <h3>
+                Direct Support
+              </h3>
+
+              <p>
+                Speak with our team through WhatsApp.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       POPULAR ROUTES
+  ====================================================== -->
+
+  <section class="popular-routes">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>
+          POPULAR ROUTES
+        </span>
+
+        <h2>
+          Where Are You
+          <strong>Going?</strong>
+        </h2>
+
+        <p>
+          We can assist with travel to destinations
+          across Africa, Europe, the Middle East
+          and beyond.
+        </p>
+
+      </div>
+
+
+      <div class="route-grid">
+
+
+        <div class="route-card">
+
+          <span>
+            AFRICA
+          </span>
+
+          <h3>
+            🇪🇬 Cairo → 🇳🇬 Lagos
+          </h3>
+
+          <p>
+            One of our popular routes connecting
+            Egypt and Nigeria.
+          </p>
+
+        </div>
+
+
+        <div class="route-card">
+
+          <span>
+            MIDDLE EAST
+          </span>
+
+          <h3>
+            🇪🇬 Cairo → 🇦🇪 Dubai
+          </h3>
+
+          <p>
+            Travel between Cairo and Dubai for
+            business, holidays and more.
+          </p>
+
+        </div>
+
+
+        <div class="route-card">
+
+          <span>
+            EUROPE
+          </span>
+
+          <h3>
+            🇪🇬 Cairo → 🇬🇧 London
+          </h3>
+
+          <p>
+            Get assistance planning your trip
+            to the United Kingdom.
+          </p>
+
+        </div>
+
+
+        <div class="route-card">
+
+          <span>
+            AFRICA
+          </span>
+
+          <h3>
+            🇳🇬 Lagos → 🇬🇭 Accra
+          </h3>
+
+          <p>
+            Convenient travel options between
+            Nigeria and Ghana.
+          </p>
+
+        </div>
+
+
+        <div class="route-card">
+
+          <span>
+            ASIA
+          </span>
+
+          <h3>
+            🇪🇬 Cairo → 🇨🇳 China
+          </h3>
+
+          <p>
+            Travel assistance for business and
+            international journeys.
+          </p>
+
+        </div>
+
+
+        <div class="route-card">
+
+          <span>
+            WORLDWIDE
+          </span>
+
+          <h3>
+            🌍 Other Destinations
+          </h3>
+
+          <p>
+            Don't see your destination? Contact
+            us and tell us where you want to go.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       VISA
+  ====================================================== -->
+
+  <section class="visa-section">
+
+    <div class="container visa-content">
+
+
+      <div>
+
+        <span class="section-tag">
+          TRAVEL SUPPORT
+        </span>
+
+        <h2>
+          Need Help With
+          <strong>Visa Support?</strong>
+        </h2>
+
+        <p>
+          We provide travel guidance and visa
+          consultation support to help you understand
+          the requirements for your intended destination.
+        </p>
+
+        <br>
+
+        <a
+          href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20need%20visa%20assistance."
+          class="btn btn-primary"
+        >
+          Ask About Visa Support
+        </a>
+
+      </div>
+
+
+      <div class="visa-list">
+
+        <div>
+          📋 Visa Requirement Guidance
+        </div>
+
+        <div>
+          🛂 Travel Documentation Assistance
+        </div>
+
+        <div>
+          🌍 Destination Information
+        </div>
+
+        <div>
+          💬 Direct Travel Consultation
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CTA
+  ====================================================== -->
+
+  <section class="flight-cta">
+
+    <div class="container">
+
+      <h2>
+        Ready to Travel?
+      </h2>
+
+      <p>
+        Send us your travel requirements and let
+        the Ballow Connect team help you plan your journey.
+      </p>
+
+      <a
+        href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20would%20like%20help%20booking%20a%20flight."
+        class="btn btn-light"
+      >
+        💬 Talk to Us on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div>
+
+        <div class="logo footer-logo">
+
+          <span>BALLOW</span>
+
+          <small>
+            CONNECT
+          </small>
+
+        </div>
+
+        <p>
+          Travel. Ship. Shop. Connect.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Services
+        </h4>
+
+        <a href="flights.html">
+          Flight Booking
+        </a>
+
+        <a href="cargo.html">
+          Cargo Shipping
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="shop.html#grains">
+          Rice & Grains
+        </a>
+
+        <a href="shop.html#spices">
+          Spices
+        </a>
+
+        <a href="shop.html#snacks">
+          Snacks
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="https://wa.me/2347030457948">
+          WhatsApp
+        </a>
+
+        <span>
+          Cairo • Lagos • Worldwide
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <span>
+          © 2026 Ballow Connect. All rights reserved.
+        </span>
+
+        <span>
+          Travel • Cargo • African Shop
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       FLIGHT PAGE SCRIPT
+  ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+
+        /* ================================================
+           MOBILE MENU
+        ================================================= */
+
+        const menuToggle =
+          document.getElementById("menuToggle");
+
+        const mainNav =
+          document.getElementById("mainNav");
+
+
+        if (menuToggle && mainNav) {
+
+          menuToggle.addEventListener(
+            "click",
+            function () {
+
+              mainNav.classList.toggle("active");
+
+            }
+          );
+
+
+          mainNav
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+              link.addEventListener(
+                "click",
+                function () {
+
+                  mainNav.classList.remove("active");
+
+                }
+              );
+
+            });
+
+        }
+
+
+        /* ================================================
+           TRIP TYPE
+        ================================================= */
+
+        const roundTripBtn =
+          document.getElementById("roundTripBtn");
+
+        const oneWayBtn =
+          document.getElementById("oneWayBtn");
+
+        const returnDateGroup =
+          document.getElementById("returnDateGroup");
+
+        const returnDate =
+          document.getElementById("returnDate");
+
+
+        roundTripBtn.addEventListener(
+          "click",
+          function () {
+
+            roundTripBtn.classList.add("active");
+
+            oneWayBtn.classList.remove("active");
+
+            returnDateGroup.style.display =
+              "block";
+
+            returnDate.required =
+              true;
+
+          }
+        );
+
+
+        oneWayBtn.addEventListener(
+          "click",
+          function () {
+
+            oneWayBtn.classList.add("active");
+
+            roundTripBtn.classList.remove("active");
+
+            returnDateGroup.style.display =
+              "none";
+
+            returnDate.required =
+              false;
+
+            returnDate.value =
+              "";
+
+          }
+        );
+
+
+        /* ================================================
+           FLIGHT FORM
+        ================================================= */
+
+        const flightForm =
+          document.getElementById("fullFlightForm");
+
+
+        flightForm.addEventListener(
+          "submit",
+          function (event) {
+
+            event.preventDefault();
+
+
+            const from =
+              document
+                .getElementById("flightFrom")
+                .value
+                .trim();
+
+
+            const to =
+              document
+                .getElementById("flightTo")
+                .value
+                .trim();
+
+
+            const departure =
+              document
+                .getElementById("departureDate")
+                .value;
+
+
+            const returnValue =
+              returnDate.value;
+
+
+            const passengers =
+              document
+                .getElementById("passengers")
+                .value;
+
+
+            const travelClass =
+              document
+                .getElementById("travelClass")
+                .value;
+
+
+            const travellerName =
+              document
+                .getElementById("travellerName")
+                .value
+                .trim();
+
+
+            const travellerPhone =
+              document
+                .getElementById("travellerPhone")
+                .value
+                .trim();
+
+
+            const isOneWay =
+              oneWayBtn.classList.contains("active");
+
+
+            if (
+              !from ||
+              !to ||
+              !departure ||
+              !travellerName ||
+              !travellerPhone
+            ) {
+
+              alert(
+                "Please complete all required fields."
+              );
+
+              return;
+
+            }
+
+
+            if (
+              !isOneWay &&
+              !returnValue
+            ) {
+
+              alert(
+                "Please select a return date."
+              );
+
+              return;
+
+            }
+
+
+            let message =
+              "Hello Ballow Connect,%0A%0A" +
+              "I would like to request a flight booking.%0A%0A" +
+
+              "✈️ TRIP TYPE: " +
+              (
+                isOneWay
+                  ? "One Way"
+                  : "Round Trip"
+              ) +
+
+              "%0A" +
+
+              "📍 FROM: " +
+              encodeURIComponent(from) +
+
+              "%0A" +
+
+              "📍 TO: " +
+              encodeURIComponent(to) +
+
+              "%0A" +
+
+              "📅 DEPARTURE: " +
+              encodeURIComponent(departure);
+
+
+            if (!isOneWay) {
+
+              message +=
+                "%0A" +
+                "📅 RETURN: " +
+                encodeURIComponent(returnValue);
+
+            }
+
+
+            message +=
+              "%0A" +
+              "👥 PASSENGERS: " +
+              encodeURIComponent(passengers) +
+
+              "%0A" +
+
+              "💺 CLASS: " +
+              encodeURIComponent(travelClass) +
+
+              "%0A%0A" +
+
+              "👤 TRAVELLER: " +
+              encodeURIComponent(travellerName) +
+
+              "%0A" +
+
+              "📱 PHONE / WHATSAPP: " +
+              encodeURIComponent(travellerPhone) +
+
+              "%0A%0A" +
+
+              "Please send me the available flight options and prices.";
+
+
+            const whatsappURL =
+              "https://wa.me/2347030457948?text=" +
+              message;
+
+
+            window.open(
+              whatsappURL,
+              "_blank"
+            );
+
+          }
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
