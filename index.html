@@ -1,1 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Ballow Connect - Flights, cargo shipping, hotels, tours and authentic African products."
+  >
+
+  <title>Ballow Connect | Travel • Cargo • African Shop</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="site-header">
+
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo">
+        <span>BALLOW</span>
+        <small>CONNECT</small>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+
+        <a href="index.html">Home</a>
+        <a href="flights.html">Flights</a>
+        <a href="cargo.html">Cargo</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="tours.html">Tours</a>
+        <a href="shop.html">African Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+
+        <span class="hero-label">
+          BALLOW CONNECT
+        </span>
+
+        <h1>
+          Travel. Ship.<br>
+          <strong>Shop. Connect.</strong>
+        </h1>
+
+        <p>
+          Your trusted partner for flights, cargo shipping,
+          hotels, tours and authentic African products.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="flights.html"
+            class="btn btn-primary"
+          >
+            ✈️ Book a Flight
+          </a>
+
+          <a
+            href="shop.html"
+            class="btn btn-light"
+          >
+            🛍️ African Shop
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK SERVICES
+    ========================== -->
+
+    <section class="services">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span>WHAT WE DO</span>
+
+          <h2>
+            Everything You Need,
+            <strong>In One Place</strong>
+          </h2>
+
+          <p>
+            From booking your next flight to shipping your
+            goods or ordering food from home, Ballow Connect
+            makes it simple.
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+          <a href="flights.html" class="service-card">
+
+            <div class="service-icon">✈️</div>
+
+            <h3>Flight Booking</h3>
+
+            <p>
+              Local and international flights with
+              professional travel assistance.
+            </p>
+
+            <span>Book a Flight →</span>
+
+          </a>
+
+
+          <a href="cargo.html" class="service-card">
+
+            <div class="service-icon">📦</div>
+
+            <h3>Cargo Shipping</h3>
+
+            <p>
+              Safe and reliable air and sea cargo
+              shipping from Cairo and beyond.
+            </p>
+
+            <span>Ship With Us →</span>
+
+          </a>
+
+
+          <a href="hotels.html" class="service-card">
+
+            <div class="service-icon">🏨</div>
+
+            <h3>Hotels</h3>
+
+            <p>
+              Comfortable accommodation for business,
+              holidays and family trips.
+            </p>
+
+            <span>Find a Hotel →</span>
+
+          </a>
+
+
+          <a href="tours.html" class="service-card">
+
+            <div class="service-icon">🌍</div>
+
+            <h3>Tours & Packages</h3>
+
+            <p>
+              Discover unforgettable destinations with
+              carefully planned travel packages.
+            </p>
+
+            <span>Explore Tours →</span>
+
+          </a>
+
+
+          <a
+            href="shop.html"
+            class="service-card service-card-shop"
+          >
+
+            <div class="service-icon">🛍️</div>
+
+            <h3>Ballow African Shop</h3>
+
+            <p>
+              Authentic Nigerian food, groceries,
+              spices, snacks and specialty products.
+            </p>
+
+            <span>Shop Now →</span>
+
+          </a>
+
+
+          <a href="contact.html" class="service-card">
+
+            <div class="service-icon">💬</div>
+
+            <h3>Customer Support</h3>
+
+            <p>
+              Need assistance? Speak directly with
+              our customer service team.
+            </p>
+
+            <span>Contact Us →</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FLIGHT BOOKING
+    ========================== -->
+
+    <section class="booking-section">
+
+      <div class="container booking-container">
+
+        <div class="booking-text">
+
+          <span class="section-tag">
+            FLIGHT BOOKING
+          </span>
+
+          <h2>
+            Your Journey
+            <strong>Starts Here</strong>
+          </h2>
+
+          <p>
+            Planning a business trip, family vacation or
+            relocation? Let Ballow Connect help you find
+            the right travel option.
+          </p>
+
+          <a
+            href="flights.html"
+            class="btn btn-primary"
+          >
+            Start Booking
+          </a>
+
+        </div>
+
+
+        <div class="booking-box">
+
+          <div class="trip-tabs">
+
+            <button class="active">
+              Round Trip
+            </button>
+
+            <button>
+              One Way
+            </button>
+
+          </div>
+
+
+          <form id="flightForm">
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label>From</label>
+
+                <input
+                  type="text"
+                  placeholder="Cairo"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label>To</label>
+
+                <input
+                  type="text"
+                  placeholder="Lagos"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label>Departure</label>
+
+                <input
+                  type="date"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label>Passengers</label>
+
+                <select>
+
+                  <option>1 Passenger</option>
+                  <option>2 Passengers</option>
+                  <option>3 Passengers</option>
+                  <option>4 Passengers</option>
+                  <option>5+ Passengers</option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary full-width"
+            >
+              Search Flight Options
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CARGO
+    ========================== -->
+
+    <section class="cargo-section">
+
+      <div class="container cargo-content">
+
+        <div>
+
+          <span class="section-tag">
+            CARGO SERVICES
+          </span>
+
+          <h2>
+            Ship With
+            <strong>Confidence</strong>
+          </h2>
+
+          <p>
+            From small packages to large consignments,
+            we provide reliable cargo solutions designed
+            around your needs.
+          </p>
+
+          <a
+            href="cargo.html"
+            class="btn btn-light"
+          >
+            Request Cargo Quote
+          </a>
+
+        </div>
+
+
+        <div class="cargo-features">
+
+          <div>
+            <strong>✈️</strong>
+            <span>Air Freight</span>
+          </div>
+
+          <div>
+            <strong>🚢</strong>
+            <span>Sea Freight</span>
+          </div>
+
+          <div>
+            <strong>🚚</strong>
+            <span>Door-to-Door</span>
+          </div>
+
+          <div>
+            <strong>📋</strong>
+            <span>Customs Support</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AFRICAN SHOP
+    ========================== -->
+
+    <section class="shop-preview">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span>BALLOW AFRICAN SHOP</span>
+
+          <h2>
+            Taste the Flavours
+            <strong>of Home</strong>
+          </h2>
+
+          <p>
+            Authentic Nigerian food and groceries delivered
+            to you.
+          </p>
+
+        </div>
+
+
+        <div class="shop-categories">
+
+          <a href="shop.html#grains">
+            <span>🌾</span>
+            <strong>Rice & Grains</strong>
+          </a>
+
+          <a href="shop.html#spices">
+            <span>🌶️</span>
+            <strong>Spices</strong>
+          </a>
+
+          <a href="shop.html#snacks">
+            <span>🍪</span>
+            <strong>Snacks</strong>
+          </a>
+
+          <a href="shop.html#drinks">
+            <span>🥤</span>
+            <strong>Beverages</strong>
+          </a>
+
+          <a href="shop.html#frozen">
+            <span>🥘</span>
+            <strong>Frozen Foods</strong>
+          </a>
+
+          <a href="shop.html">
+            <span>🛒</span>
+            <strong>View All</strong>
+          </a>
+
+        </div>
+
+
+        <div class="shop-cta">
+
+          <div>
+
+            <span class="section-tag">
+              AUTHENTIC • FRESH • QUALITY
+            </span>
+
+            <h3>
+              Bring a Taste of Africa
+              <br>
+              Wherever You Are.
+            </h3>
+
+          </div>
+
+          <a
+            href="shop.html"
+            class="btn btn-primary"
+          >
+            Shop Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DESTINATIONS
+    ========================== -->
+
+    <section class="destinations">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span>TRAVEL DESTINATIONS</span>
+
+          <h2>
+            Go Further With
+            <strong>Ballow Connect</strong>
+          </h2>
+
+        </div>
+
+
+        <div class="destination-grid">
+
+          <div>🇳🇬 Nigeria</div>
+          <div>🇪🇬 Egypt</div>
+          <div>🇬🇭 Ghana</div>
+          <div>🇦🇪 Dubai / UAE</div>
+          <div>🇬🇧 United Kingdom</div>
+          <div>🇨🇳 China</div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY US
+    ========================== -->
+
+    <section class="why-us">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span>WHY BALLOW CONNECT</span>
+
+          <h2>
+            Service You Can
+            <strong>Trust</strong>
+          </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+          <div>
+            <span>01</span>
+            <h3>Reliable Service</h3>
+            <p>
+              We work hard to make every travel,
+              shipping and shopping experience smooth.
+            </p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <h3>Expert Support</h3>
+            <p>
+              Our team is available to help you
+              choose the right solution.
+            </p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <h3>Competitive Pricing</h3>
+            <p>
+              We aim to provide affordable solutions
+              without compromising service quality.
+            </p>
+          </div>
+
+          <div>
+            <span>04</span>
+            <h3>Global Connections</h3>
+            <p>
+              Connecting Nigeria, Egypt, Ghana and
+              destinations around the world.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about-preview">
+
+      <div class="container about-content">
+
+        <div>
+
+          <span class="section-tag">
+            ABOUT BALLOW CONNECT
+          </span>
+
+          <h2>
+            Connecting People,
+            <strong>Opportunities & Destinations</strong>
+          </h2>
+
+        </div>
+
+
+        <div>
+
+          <p>
+            Ballow Connect is a trusted travel and logistics
+            company providing cargo shipping, travel bookings,
+            hotel reservations and tailored tour services.
+          </p>
+
+          <p>
+            We also connect customers with authentic African
+            products through Ballow African Shop.
+          </p>
+
+          <a
+            href="about.html"
+            class="text-link"
+          >
+            Learn More About Us →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHATSAPP CTA
+    ========================== -->
+
+    <section class="contact-cta">
+
+      <div class="container">
+
+        <span>
+          NEED HELP?
+        </span>
+
+        <h2>
+          Let's Make Your
+          <strong>Journey Easier.</strong>
+        </h2>
+
+        <p>
+          Speak with the Ballow Connect team today.
+        </p>
+
+        <a
+          href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+          class="btn btn-light"
+        >
+          💬 Chat on WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <div class="logo footer-logo">
+          <span>BALLOW</span>
+          <small>CONNECT</small>
+        </div>
+
+        <p>
+          Travel. Ship. Shop. Connect.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Services</h4>
+
+        <a href="flights.html">Flight Booking</a>
+        <a href="cargo.html">Cargo Shipping</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="tours.html">Tours</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Shop</h4>
+
+        <a href="shop.html">African Shop</a>
+        <a href="shop.html#grains">Rice & Grains</a>
+        <a href="shop.html#spices">Spices</a>
+        <a href="shop.html#snacks">Snacks</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Contact</h4>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a
+          href="https://wa.me/2347030457948"
+        >
+          WhatsApp
+        </a>
+
+        <span>
+          Cairo • Lagos • Worldwide
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <span>
+          © 2026 Ballow Connect. All rights reserved.
+        </span>
+
+        <span>
+          Travel • Cargo • African Shop
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
