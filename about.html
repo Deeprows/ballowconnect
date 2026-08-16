@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Learn more about Ballow Connect — a trusted travel, cargo, hotel, tours and African shopping service connecting people and businesses worldwide."
+  >
+
+  <title>About Us | Ballow Connect</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <style>
+
+    /* =========================================
+       BALLOW CONNECT — ABOUT PAGE
+    ========================================= */
+
+    .about-hero {
+
+      min-height: 480px;
+
+      display: flex;
+
+      align-items: center;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 10, 16, .94),
+          rgba(4, 10, 16, .70),
+          rgba(4, 10, 16, .38)
+        ),
+        url("icons/about.jpeg");
+
+      background-size: cover;
+
+      background-position: center;
+
+    }
+
+
+    .about-hero-content {
+
+      max-width: 760px;
+
+      padding-top: 50px;
+
+      position: relative;
+
+      z-index: 2;
+
+    }
+
+
+    .about-hero h1 {
+
+      margin-top: 14px;
+
+      font-size:
+        clamp(42px, 6vw, 70px);
+
+      line-height: 1;
+
+      letter-spacing: -2px;
+
+    }
+
+
+    .about-hero h1 strong {
+
+      color: var(--gold-light);
+
+    }
+
+
+    .about-hero p {
+
+      max-width: 650px;
+
+      margin-top: 22px;
+
+      color: #c8d1d9;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================
+       STORY
+    ========================================= */
+
+    .about-story {
+
+      background: #f7f9fa;
+
+      color: #111b25;
+
+    }
+
+
+    .about-story-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.15fr .85fr;
+
+      gap: 55px;
+
+      align-items: center;
+
+    }
+
+
+    .about-story h2 {
+
+      margin-top: 13px;
+
+      font-size:
+        clamp(35px, 5vw, 54px);
+
+      line-height: 1.04;
+
+    }
+
+
+    .about-story h2 strong {
+
+      color: #b57f1f;
+
+    }
+
+
+    .about-story p {
+
+      margin-top: 18px;
+
+      color: #687580;
+
+      line-height: 1.8;
+
+    }
+
+
+    .about-story-card {
+
+      padding: 35px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 18px 50px rgba(0, 0, 0, .07);
+
+    }
+
+
+    .about-story-card-icon {
+
+      font-size: 48px;
+
+    }
+
+
+    .about-story-card h3 {
+
+      margin-top: 15px;
+
+      font-size: 25px;
+
+    }
+
+
+    .about-story-card p {
+
+      margin-bottom: 0;
+
+    }
+
+
+    /* =========================================
+       SERVICES
+    ========================================= */
+
+    .about-services {
+
+      background: var(--bg);
+
+    }
+
+
+    .about-service-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 17px;
+
+      margin-top: 38px;
+
+    }
+
+
+    .about-service-card {
+
+      padding: 27px 23px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      transition:
+        transform .25s ease,
+        border-color .25s ease;
+
+    }
+
+
+    .about-service-card:hover {
+
+      transform: translateY(-5px);
+
+      border-color: var(--gold);
+
+    }
+
+
+    .about-service-icon {
+
+      font-size: 40px;
+
+    }
+
+
+    .about-service-card h3 {
+
+      margin-top: 15px;
+
+      font-size: 18px;
+
+    }
+
+
+    .about-service-card p {
+
+      margin-top: 9px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.65;
+
+    }
+
+
+    /* =========================================
+       MISSION
+    ========================================= */
+
+    .about-mission {
+
+      background: #f7f9fa;
+
+      color: #111b25;
+
+    }
+
+
+    .about-mission-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 20px;
+
+    }
+
+
+    .about-mission-card {
+
+      padding: 35px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 18px;
+
+    }
+
+
+    .about-mission-card h2 {
+
+      margin-top: 12px;
+
+      font-size: 32px;
+
+    }
+
+
+    .about-mission-card p {
+
+      margin-top: 15px;
+
+      color: #6d7882;
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =========================================
+       VALUES
+    ========================================= */
+
+    .about-values {
+
+      background: var(--bg);
+
+    }
+
+
+    .about-values-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 17px;
+
+      margin-top: 38px;
+
+    }
+
+
+    .about-value {
+
+      padding: 28px 22px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+    }
+
+
+    .about-value-icon {
+
+      font-size: 34px;
+
+    }
+
+
+    .about-value h3 {
+
+      margin-top: 14px;
+
+      font-size: 17px;
+
+    }
+
+
+    .about-value p {
+
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.65;
+
+    }
+
+
+    /* =========================================
+       WHY US
+    ========================================= */
+
+    .about-why {
+
+      background: #f7f9fa;
+
+      color: #111b25;
+
+    }
+
+
+    .about-why-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        .8fr 1.2fr;
+
+      gap: 55px;
+
+      align-items: center;
+
+    }
+
+
+    .about-why h2 {
+
+      margin-top: 13px;
+
+      font-size:
+        clamp(35px, 5vw, 52px);
+
+      line-height: 1.05;
+
+    }
+
+
+    .about-why h2 strong {
+
+      color: #b57f1f;
+
+    }
+
+
+    .about-why > .container p {
+
+      color: #687580;
+
+    }
+
+
+    .about-benefits {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 14px;
+
+    }
+
+
+    .about-benefit {
+
+      padding: 22px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 14px;
+
+    }
+
+
+    .about-benefit-icon {
+
+      font-size: 30px;
+
+    }
+
+
+    .about-benefit h3 {
+
+      margin-top: 10px;
+
+      font-size: 16px;
+
+    }
+
+
+    .about-benefit p {
+
+      margin-top: 7px;
+
+      color: #78838d;
+
+      font-size: 12px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* =========================================
+       CTA
+    ========================================= */
+
+    .about-cta {
+
+      background:
+        linear-gradient(
+          135deg,
+          #c9932f,
+          #e2b75a
+        );
+
+      color: #111;
+
+      text-align: center;
+
+    }
+
+
+    .about-cta h2 {
+
+      font-size:
+        clamp(35px, 5vw, 55px);
+
+    }
+
+
+    .about-cta p {
+
+      max-width: 650px;
+
+      margin: 17px auto 26px;
+
+      color: rgba(17, 17, 17, .68);
+
+    }
+
+
+    .about-cta-buttons {
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 950px) {
+
+      .about-story-grid,
+      .about-why-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .about-service-grid,
+      .about-values-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .about-hero {
+
+        min-height: 450px;
+
+      }
+
+
+      .about-hero h1 {
+
+        letter-spacing: -1px;
+
+      }
+
+
+      .about-service-grid,
+      .about-values-grid,
+      .about-mission-grid,
+      .about-benefits {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .about-story-card,
+      .about-mission-card,
+      .about-benefit {
+
+        padding: 23px;
+
+      }
+
+
+      .about-cta-buttons {
+
+        flex-direction: column;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+
+    <div class="container nav-container">
+
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <span>
+          BALLOW
+        </span>
+
+        <small>
+          CONNECT
+        </small>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="flights.html">
+          Flights
+        </a>
+
+        <a href="cargo.html">
+          Cargo
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a
+          href="about.html"
+          class="active"
+        >
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <section class="about-hero">
+
+    <div class="container about-hero-content">
+
+
+      <span class="section-tag">
+        ABOUT BALLOW CONNECT
+      </span>
+
+
+      <h1>
+
+        Connecting People,
+        <strong>
+          Places & Opportunities.
+        </strong>
+
+      </h1>
+
+
+      <p>
+
+        We make travel, cargo shipping, accommodation
+        and shopping easier by connecting people and
+        businesses with reliable services across borders.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       OUR STORY
+  ========================================== -->
+
+  <section class="about-story">
+
+    <div class="container about-story-grid">
+
+
+      <div>
+
+        <span class="section-tag">
+          WHO WE ARE
+        </span>
+
+
+        <h2>
+
+          About
+          <strong>
+            Ballow Connect
+          </strong>
+
+        </h2>
+
+
+        <p>
+
+          Ballow Connect is a trusted travel and logistics
+          company committed to delivering reliable cargo
+          shipping, seamless travel bookings, hotel
+          reservations and tailored tour services.
+
+        </p>
+
+
+        <p>
+
+          We connect individuals and businesses across
+          Nigeria, Egypt, Ghana, China and beyond, helping
+          customers move, travel, explore and access the
+          products they need.
+
+        </p>
+
+
+        <p>
+
+          With a strong focus on customer satisfaction,
+          professionalism and reliable support, we work
+          to make travel and logistics simple and
+          stress-free.
+
+        </p>
+
+      </div>
+
+
+      <div class="about-story-card">
+
+        <div class="about-story-card-icon">
+          🌍
+        </div>
+
+
+        <h3>
+          More Than a Service
+        </h3>
+
+
+        <p>
+
+          At Ballow Connect, we don't just move cargo
+          or book trips. We connect people, opportunities
+          and destinations worldwide.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       OUR SERVICES
+  ========================================== -->
+
+  <section class="about-services">
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <span>
+          WHAT WE DO
+        </span>
+
+
+        <h2>
+
+          Our
+          <strong>
+            Services
+          </strong>
+
+        </h2>
+
+
+        <p>
+          Comprehensive solutions designed around your needs.
+        </p>
+
+      </div>
+
+
+      <div class="about-service-grid">
+
+
+        <div class="about-service-card">
+
+          <div class="about-service-icon">
+            ✈️
+          </div>
+
+          <h3>
+            Flight Booking
+          </h3>
+
+          <p>
+
+            Local and international flight booking
+            assistance with travel planning support.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-service-card">
+
+          <div class="about-service-icon">
+            📦
+          </div>
+
+          <h3>
+            Cargo Shipping
+          </h3>
+
+          <p>
+
+            Secure air and sea cargo shipping with
+            reliable handling and delivery solutions.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-service-card">
+
+          <div class="about-service-icon">
+            🏨
+          </div>
+
+          <h3>
+            Hotel Reservations
+          </h3>
+
+          <p>
+
+            Find comfortable accommodation ranging
+            from budget stays to luxury properties.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-service-card">
+
+          <div class="about-service-icon">
+            🌴
+          </div>
+
+          <h3>
+            Tours & Packages
+          </h3>
+
+          <p>
+
+            Customized tours, family vacations,
+            honeymoons and unforgettable experiences.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-service-card">
+
+          <div class="about-service-icon">
+            🛍️
+          </div>
+
+          <h3>
+            African Shop
+          </h3>
+
+          <p>
+
+            Access African food, clothing, shoes,
+            cosmetics and other products.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-service-card">
+
+          <div class="about-service-icon">
+            🤝
+          </div>
+
+          <h3>
+            Customer Support
+          </h3>
+
+          <p>
+
+            Professional assistance to help you
+            before, during and after your service.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       MISSION
+  ========================================== -->
+
+  <section class="about-mission">
+
+    <div class="container about-mission-grid">
+
+
+      <div class="about-mission-card">
+
+        <span class="section-tag">
+          OUR MISSION
+        </span>
+
+
+        <h2>
+          Connecting People & Businesses
+        </h2>
+
+
+        <p>
+
+          Our mission is to connect people and businesses
+          through reliable travel and logistics services
+          that create opportunities, simplify movement
+          and support growth.
+
+        </p>
+
+      </div>
+
+
+      <div class="about-mission-card">
+
+        <span class="section-tag">
+          OUR VISION
+        </span>
+
+
+        <h2>
+          A More Connected World
+        </h2>
+
+
+        <p>
+
+          We aim to build a trusted service network that
+          makes international travel, shipping, shopping
+          and access to useful services easier for
+          individuals and businesses.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       VALUES
+  ========================================== -->
+
+  <section class="about-values">
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <span>
+          WHAT MATTERS TO US
+        </span>
+
+
+        <h2>
+
+          Our Core
+          <strong>
+            Values
+          </strong>
+
+        </h2>
+
+      </div>
+
+
+      <div class="about-values-grid">
+
+
+        <div class="about-value">
+
+          <div class="about-value-icon">
+            ⭐
+          </div>
+
+          <h3>
+            Commitment to Quality
+          </h3>
+
+          <p>
+
+            We maintain high standards of quality
+            and reliability across our services.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-value">
+
+          <div class="about-value-icon">
+            ❤️
+          </div>
+
+          <h3>
+            Customer-Centric Approach
+          </h3>
+
+          <p>
+
+            We listen to our customers and work to
+            understand and meet their needs.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-value">
+
+          <div class="about-value-icon">
+            🤝
+          </div>
+
+          <h3>
+            Reliability
+          </h3>
+
+          <p>
+
+            We aim to provide dependable services
+            customers can confidently rely on.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-value">
+
+          <div class="about-value-icon">
+            🌍
+          </div>
+
+          <h3>
+            Global Connection
+          </h3>
+
+          <p>
+
+            We connect customers with destinations,
+            services and opportunities across borders.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-value">
+
+          <div class="about-value-icon">
+            💼
+          </div>
+
+          <h3>
+            Professionalism
+          </h3>
+
+          <p>
+
+            We approach every customer request with
+            care, professionalism and attention to detail.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-value">
+
+          <div class="about-value-icon">
+            💡
+          </div>
+
+          <h3>
+            Practical Solutions
+          </h3>
+
+          <p>
+
+            We focus on finding solutions that are
+            convenient, efficient and suitable for you.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       WHY CHOOSE US
+  ========================================== -->
+
+  <section class="about-why">
+
+    <div class="container about-why-grid">
+
+
+      <div>
+
+        <span class="section-tag">
+          WHY BALLOW CONNECT
+        </span>
+
+
+        <h2>
+
+          Service Built Around
+          <strong>
+            You.
+          </strong>
+
+        </h2>
+
+
+        <p style="margin-top:20px; line-height:1.8;">
+
+          Whether you're planning a journey, sending
+          cargo, booking accommodation or looking for
+          products, our goal is to make the process
+          straightforward and convenient.
+
+        </p>
+
+      </div>
+
+
+      <div class="about-benefits">
+
+
+        <div class="about-benefit">
+
+          <div class="about-benefit-icon">
+            🌍
+          </div>
+
+          <h3>
+            International Reach
+          </h3>
+
+          <p>
+            Connecting customers across multiple
+            countries and destinations.
+          </p>
+
+        </div>
+
+
+        <div class="about-benefit">
+
+          <div class="about-benefit-icon">
+            ⚡
+          </div>
+
+          <h3>
+            Simple Process
+          </h3>
+
+          <p>
+            We make enquiries and service requests
+            easy to submit.
+          </p>
+
+        </div>
+
+
+        <div class="about-benefit">
+
+          <div class="about-benefit-icon">
+            💬
+          </div>
+
+          <h3>
+            Direct Support
+          </h3>
+
+          <p>
+            Reach our team directly through WhatsApp
+            and other contact channels.
+          </p>
+
+        </div>
+
+
+        <div class="about-benefit">
+
+          <div class="about-benefit-icon">
+            🔒
+          </div>
+
+          <h3>
+            Reliable Service
+          </h3>
+
+          <p>
+            We focus on safe, dependable and
+            professional service delivery.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       CTA
+  ========================================== -->
+
+  <section class="about-cta">
+
+    <div class="container">
+
+
+      <span class="section-tag">
+        BALLOW CONNECT
+      </span>
+
+
+      <h2>
+        Let's Make Your Next Journey Easier.
+      </h2>
+
+
+      <p>
+
+        Whether you need a flight, cargo service,
+        hotel, tour package or something else,
+        we're ready to help.
+
+      </p>
+
+
+      <div class="about-cta-buttons">
+
+
+        <a
+          href="contact.html"
+          class="btn btn-dark"
+        >
+          Contact Us
+        </a>
+
+
+        <a
+          href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+          class="btn btn-outline"
+        >
+          💬 WhatsApp Us
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div>
+
+        <div class="logo footer-logo">
+
+          <span>
+            BALLOW
+          </span>
+
+          <small>
+            CONNECT
+          </small>
+
+        </div>
+
+
+        <p>
+          Travel. Ship. Shop. Connect.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Services
+        </h4>
+
+        <a href="flights.html">
+          Flight Booking
+        </a>
+
+        <a href="cargo.html">
+          Cargo Shipping
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="shop.html">
+          Food & Groceries
+        </a>
+
+        <a href="shop.html">
+          Clothing & Fashion
+        </a>
+
+        <a href="shop.html">
+          Cosmetics & Beauty
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="https://wa.me/2347030457948">
+          WhatsApp
+        </a>
+
+        <span>
+          Cairo • Lagos • Worldwide
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <span>
+          © 2026 Ballow Connect. All rights reserved.
+        </span>
+
+        <span>
+          Travel • Cargo • African Shop
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================
+       MOBILE MENU
+  ========================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+        const menuToggle =
+          document.getElementById("menuToggle");
+
+        const mainNav =
+          document.getElementById("mainNav");
+
+
+        if (menuToggle && mainNav) {
+
+          menuToggle.addEventListener(
+            "click",
+            function () {
+
+              mainNav.classList.toggle("active");
+
+            }
+          );
+
+
+          mainNav
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+              link.addEventListener(
+                "click",
+                function () {
+
+                  mainNav.classList.remove("active");
+
+                }
+              );
+
+            });
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
