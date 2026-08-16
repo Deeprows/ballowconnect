@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Ballow Connect hotel reservations — find comfortable hotels and accommodation anywhere in the world."
+  >
+
+  <title>Hotel Reservations | Ballow Connect</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <style>
+
+    /* =====================================================
+       BALLOW CONNECT — HOTELS
+    ===================================================== */
+
+    .hotel-hero {
+      min-height: 500px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 10, 16, .94),
+          rgba(4, 10, 16, .70),
+          rgba(4, 10, 16, .38)
+        ),
+        url("icons/hotel.jpeg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hotel-hero-content {
+      max-width: 760px;
+      padding-top: 55px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .hotel-hero h1 {
+      margin-top: 14px;
+
+      font-size: clamp(42px, 6vw, 72px);
+
+      line-height: .98;
+
+      letter-spacing: -2px;
+    }
+
+    .hotel-hero h1 strong {
+      color: var(--gold-light);
+    }
+
+    .hotel-hero p {
+      max-width: 620px;
+
+      margin-top: 23px;
+
+      color: #c6d0d9;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+    }
+
+    .hotel-hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .hotel-intro {
+      background: #f7f9fa;
+      color: #111b25;
+    }
+
+    .hotel-intro-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+    .hotel-intro h2 {
+      margin-top: 13px;
+
+      font-size: clamp(35px, 5vw, 54px);
+
+      line-height: 1.04;
+    }
+
+    .hotel-intro h2 strong {
+      color: #b57f1f;
+    }
+
+    .hotel-intro p {
+      margin-top: 18px;
+
+      color: #687580;
+
+      line-height: 1.8;
+    }
+
+    .hotel-highlight {
+      padding: 30px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 15px 45px rgba(0,0,0,.07);
+    }
+
+    .hotel-highlight-icon {
+      font-size: 45px;
+    }
+
+    .hotel-highlight h3 {
+      margin-top: 14px;
+
+      font-size: 25px;
+    }
+
+    .hotel-highlight p {
+      margin-bottom: 0;
+    }
+
+
+    /* =====================================================
+       HOTEL OPTIONS
+    ===================================================== */
+
+    .hotel-options {
+      background: var(--bg);
+    }
+
+    .hotel-option-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 16px;
+
+      margin-top: 38px;
+    }
+
+    .hotel-option {
+      min-height: 190px;
+
+      padding: 25px 20px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      background: var(--surface);
+
+      transition:
+        transform .25s ease,
+        border-color .25s ease;
+    }
+
+    .hotel-option:hover {
+      transform: translateY(-5px);
+
+      border-color: var(--gold);
+    }
+
+    .hotel-option-icon {
+      font-size: 38px;
+    }
+
+    .hotel-option h3 {
+      margin-top: 15px;
+
+      font-size: 17px;
+    }
+
+    .hotel-option p {
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       BOOKING REQUEST
+    ===================================================== */
+
+    .hotel-request {
+      background: #f6f8fa;
+
+      color: #111b25;
+    }
+
+    .hotel-request-layout {
+      display: grid;
+
+      grid-template-columns:
+        .72fr 1.28fr;
+
+      gap: 45px;
+
+      align-items: start;
+    }
+
+    .hotel-request-copy h2 {
+      margin-top: 13px;
+
+      font-size: clamp(35px, 5vw, 55px);
+
+      line-height: 1.03;
+    }
+
+    .hotel-request-copy h2 strong {
+      color: #b57f1f;
+    }
+
+    .hotel-request-copy > p {
+      margin-top: 20px;
+
+      color: #6d7882;
+
+      line-height: 1.75;
+    }
+
+    .hotel-benefits {
+      display: grid;
+
+      gap: 12px;
+
+      margin-top: 28px;
+    }
+
+    .hotel-benefit {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 14px;
+
+      background: white;
+
+      border: 1px solid #e1e6ea;
+
+      border-radius: 11px;
+    }
+
+    .hotel-benefit-icon {
+      width: 40px;
+      height: 40px;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 9px;
+
+      background: #f1e4c8;
+    }
+
+    .hotel-benefit strong {
+      display: block;
+
+      font-size: 13px;
+    }
+
+    .hotel-benefit span {
+      display: block;
+
+      margin-top: 3px;
+
+      color: #77828b;
+
+      font-size: 11px;
+    }
+
+
+    /* =====================================================
+       FORM
+    ===================================================== */
+
+    .hotel-form-card {
+      padding: 32px;
+
+      background: white;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 22px 60px rgba(0,0,0,.12);
+    }
+
+    .hotel-form-card h3 {
+      margin-bottom: 7px;
+
+      font-size: 28px;
+    }
+
+    .hotel-form-card > p {
+      margin-bottom: 25px;
+
+      color: #77828b;
+
+      font-size: 13px;
+    }
+
+    .hotel-form-row {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 14px;
+    }
+
+    .hotel-form-group {
+      margin-bottom: 15px;
+    }
+
+    .hotel-form-group label {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #293542;
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+    .hotel-form-group input,
+    .hotel-form-group select,
+    .hotel-form-group textarea {
+      width: 100%;
+
+      box-sizing: border-box;
+
+      border: 1px solid #dce2e7;
+
+      border-radius: 9px;
+
+      background: white;
+
+      color: #17222d;
+
+      outline: none;
+
+      font-family: inherit;
+    }
+
+    .hotel-form-group input,
+    .hotel-form-group select {
+      height: 51px;
+
+      padding: 0 13px;
+    }
+
+    .hotel-form-group textarea {
+      min-height: 120px;
+
+      padding: 13px;
+
+      resize: vertical;
+    }
+
+    .hotel-form-group input:focus,
+    .hotel-form-group select:focus,
+    .hotel-form-group textarea:focus {
+      border-color: #c9932f;
+
+      box-shadow:
+        0 0 0 3px rgba(201,147,47,.12);
+    }
+
+    .hotel-form-note {
+      margin-top: 12px;
+
+      color: #78838d;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       PROCESS
+    ===================================================== */
+
+    .hotel-process {
+      background: var(--bg);
+    }
+
+    .hotel-process-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 17px;
+
+      margin-top: 38px;
+    }
+
+    .hotel-process-card {
+      padding: 27px 22px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: var(--surface);
+    }
+
+    .hotel-process-number {
+      width: 43px;
+      height: 43px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: rgba(217,164,65,.15);
+
+      color: var(--gold-light);
+
+      font-weight: 900;
+    }
+
+    .hotel-process-card h3 {
+      margin-top: 18px;
+
+      font-size: 17px;
+    }
+
+    .hotel-process-card p {
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .hotel-final-cta {
+      background:
+        linear-gradient(
+          135deg,
+          #c9932f,
+          #e2b75a
+        );
+
+      color: #111;
+
+      text-align: center;
+    }
+
+    .hotel-final-cta h2 {
+      font-size: clamp(35px, 5vw, 55px);
+    }
+
+    .hotel-final-cta p {
+      max-width: 620px;
+
+      margin: 17px auto 25px;
+
+      color: rgba(17,17,17,.68);
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 1000px) {
+
+      .hotel-option-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .hotel-process-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .hotel-intro-grid,
+      .hotel-request-layout {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .hotel-hero {
+        min-height: 470px;
+      }
+
+      .hotel-hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hotel-hero-buttons {
+        flex-direction: column;
+      }
+
+      .hotel-option-grid,
+      .hotel-process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hotel-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .hotel-form-card {
+        padding: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header">
+
+    <div class="container nav-container">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+
+        <span>
+          BALLOW
+        </span>
+
+        <small>
+          CONNECT
+        </small>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="flights.html">
+          Flights
+        </a>
+
+        <a href="cargo.html">
+          Cargo
+        </a>
+
+        <a
+          href="hotels.html"
+          class="active"
+        >
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="hotel-hero">
+
+    <div class="container hotel-hero-content">
+
+      <span class="section-tag">
+        HOTEL RESERVATIONS
+      </span>
+
+      <h1>
+        Stay Somewhere
+        <strong>You’ll Love.</strong>
+      </h1>
+
+      <p>
+        Find comfortable hotels and accommodation
+        anywhere in the world. Tell us where you're
+        going and what you need, and we'll help you
+        find the right option.
+      </p>
+
+      <div class="hotel-hero-buttons">
+
+        <a
+          href="#hotelRequest"
+          class="btn btn-primary"
+        >
+          🏨 Find a Hotel
+        </a>
+
+        <a
+          href="https://wa.me/2347030457948?text=Hello%20Ballow%20Connect%2C%20I%20would%20like%20help%20finding%20a%20hotel."
+          class="btn btn-outline"
+        >
+          💬 WhatsApp Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       INTRO
+  ====================================================== -->
+
+  <section class="hotel-intro">
+
+    <div class="container hotel-intro-grid">
+
+
+      <div>
+
+        <span class="section-tag">
+          COMFORT & CONVENIENCE
+        </span>
+
+        <h2>
+          Your Stay,
+          <strong>Our Assistance.</strong>
+        </h2>
+
+        <p>
+          Whether you're travelling for business,
+          vacation, relocation or a special occasion,
+          Ballow Connect can help you find accommodation
+          that matches your needs.
+        </p>
+
+        <p>
+          Tell us your destination, travel dates,
+          number of guests and preferred hotel type.
+          We'll help you identify suitable options.
+        </p>
+
+      </div>
+
+
+      <div class="hotel-highlight">
+
+        <div class="hotel-highlight-icon">
+          🌍
+        </div>
+
+        <h3>
+          Hotels Anywhere in the World
+        </h3>
+
+        <p>
+          From budget-friendly accommodation to
+          business hotels and luxury resorts, we can
+          assist with your hotel reservation needs.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       HOTEL OPTIONS
+  ====================================================== -->
+
+  <section class="hotel-options">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>
+          ACCOMMODATION OPTIONS
+        </span>
+
+        <h2>
+          Choose the Stay
+          <strong>That Fits You</strong>
+        </h2>
+
+        <p>
+          Tell us your preference and we'll help
+          you find suitable options.
+        </p>
+
+      </div>
+
+
+      <div class="hotel-option-grid">
+
+
+        <div class="hotel-option">
+
+          <div class="hotel-option-icon">
+            🛏️
+          </div>
+
+          <h3>
+            Budget Hotels
+          </h3>
+
+          <p>
+            Affordable and comfortable accommodation
+            for travellers looking to save.
+          </p>
+
+        </div>
+
+
+        <div class="hotel-option">
+
+          <div class="hotel-option-icon">
+            🏢
+          </div>
+
+          <h3>
+            Business Hotels
+          </h3>
+
+          <p>
+            Convenient accommodation for business
+            trips, meetings and work travel.
+          </p>
+
+        </div>
+
+
+        <div class="hotel-option">
+
+          <div class="hotel-option-icon">
+            ⭐
+          </div>
+
+          <h3>
+            Luxury Hotels
+          </h3>
+
+          <p>
+            Premium accommodation, quality service
+            and comfortable surroundings.
+          </p>
+
+        </div>
+
+
+        <div class="hotel-option">
+
+          <div class="hotel-option-icon">
+            🏝️
+          </div>
+
+          <h3>
+            Resorts
+          </h3>
+
+          <p>
+            Relaxing stays for holidays, families,
+            couples and special occasions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       HOTEL REQUEST
+  ====================================================== -->
+
+  <section
+    class="hotel-request"
+    id="hotelRequest"
+  >
+
+    <div class="container hotel-request-layout">
+
+
+      <!-- LEFT -->
+
+      <div class="hotel-request-copy">
+
+        <span class="section-tag">
+          HOTEL REQUEST
+        </span>
+
+        <h2>
+          Tell Us About
+          <strong>Your Stay.</strong>
+        </h2>
+
+        <p>
+          Complete the request form and we'll use
+          your requirements to help find suitable
+          hotel options.
+        </p>
+
+
+        <div class="hotel-benefits">
+
+
+          <div class="hotel-benefit">
+
+            <div class="hotel-benefit-icon">
+              🌍
+            </div>
+
+            <div>
+
+              <strong>
+                Worldwide destinations
+              </strong>
+
+              <span>
+                Tell us where you're travelling.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="hotel-benefit">
+
+            <div class="hotel-benefit-icon">
+              💰
+            </div>
+
+            <div>
+
+              <strong>
+                Options for your budget
+              </strong>
+
+              <span>
+                Let us know your preferred price range.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="hotel-benefit">
+
+            <div class="hotel-benefit-icon">
+              🛎️
+            </div>
+
+            <div>
+
+              <strong>
+                Your preferences matter
+              </strong>
+
+              <span>
+                Tell us your room and hotel requirements.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="hotel-benefit">
+
+            <div class="hotel-benefit-icon">
+              📱
+            </div>
+
+            <div>
+
+              <strong>
+                Easy WhatsApp communication
+              </strong>
+
+              <span>
+                Your request goes directly to our team.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FORM -->
+
+      <div class="hotel-form-card">
+
+        <h3>
+          Find My Hotel
+        </h3>
+
+        <p>
+          Provide your travel details and we'll
+          contact you with available options.
+        </p>
+
+
+        <form id="hotelRequestForm">
+
+
+          <div class="hotel-form-row">
+
+            <div class="hotel-form-group">
+
+              <label for="hotelName">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="hotelName"
+                placeholder="Your full name"
+                required
+              >
+
+            </div>
+
+
+            <div class="hotel-form-group">
+
+              <label for="hotelPhone">
+                Phone / WhatsApp
+              </label>
+
+              <input
+                type="tel"
+                id="hotelPhone"
+                placeholder="+234..."
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="hotel-form-group">
+
+            <label for="hotelDestination">
+              Destination
+            </label>
+
+            <input
+              type="text"
+              id="hotelDestination"
+              placeholder="City / Country"
+              required
+            >
+
+          </div>
+
+
+          <div class="hotel-form-row">
+
+            <div class="hotel-form-group">
+
+              <label for="hotelCheckin">
+                Check-in Date
+              </label>
+
+              <input
+                type="date"
+                id="hotelCheckin"
+                required
+              >
+
+            </div>
+
+
+            <div class="hotel-form-group">
+
+              <label for="hotelCheckout">
+                Check-out Date
+              </label>
+
+              <input
+                type="date"
+                id="hotelCheckout"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="hotel-form-row">
+
+            <div class="hotel-form-group">
+
+              <label for="hotelGuests">
+                Number of Guests
+              </label>
+
+              <input
+                type="number"
+                id="hotelGuests"
+                min="1"
+                placeholder="Example: 2"
+                required
+              >
+
+            </div>
+
+
+            <div class="hotel-form-group">
+
+              <label for="hotelRooms">
+                Number of Rooms
+              </label>
+
+              <input
+                type="number"
+                id="hotelRooms"
+                min="1"
+                placeholder="Example: 1"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="hotel-form-row">
+
+            <div class="hotel-form-group">
+
+              <label for="hotelType">
+                Hotel Type
+              </label>
+
+              <select
+                id="hotelType"
+                required
+              >
+
+                <option value="">
+                  Select hotel type
+                </option>
+
+                <option>
+                  Budget Hotel
+                </option>
+
+                <option>
+                  Business Hotel
+                </option>
+
+                <option>
+                  Luxury Hotel
+                </option>
+
+                <option>
+                  Resort
+                </option>
+
+                <option>
+                  Apartment
+                </option>
+
+                <option>
+                  Any Suitable Option
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="hotel-form-group">
+
+              <label for="hotelRoomType">
+                Room Preference
+              </label>
+
+              <select
+                id="hotelRoomType"
+              >
+
+                <option value="">
+                  Select preference
+                </option>
+
+                <option>
+                  Single Room
+                </option>
+
+                <option>
+                  Double Room
+                </option>
+
+                <option>
+                  Twin Room
+                </option>
+
+                <option>
+                  Family Room
+                </option>
+
+                <option>
+                  Suite
+                </option>
+
+                <option>
+                  Any Suitable Room
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="hotel-form-row">
+
+            <div class="hotel-form-group">
+
+              <label for="hotelBudget">
+                Approximate Budget
+              </label>
+
+              <input
+                type="text"
+                id="hotelBudget"
+                placeholder="Example: $100 per night"
+              >
+
+            </div>
+
+
+            <div class="hotel-form-group">
+
+              <label for="hotelPayment">
+                Currency
+              </label>
+
+              <select
+                id="hotelPayment"
+              >
+
+                <option>
+                  USD
+                </option>
+
+                <option>
+                  EUR
+                </option>
+
+                <option>
+                  GBP
+                </option>
+
+                <option>
+                  EGP
+                </option>
+
+                <option>
+                  NGN
+                </option>
+
+                <option>
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="hotel-form-group">
+
+            <label for="hotelRequests">
+              Special Requests
+            </label>
+
+            <textarea
+              id="hotelRequests"
+              placeholder="Example: breakfast included, airport transfer, sea view, family-friendly hotel, near city centre..."
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary full-width"
+          >
+            🏨 Send Hotel Request
+          </button>
+
+
+          <p class="hotel-form-note">
+            Your request will open WhatsApp and be
+            sent directly to Ballow Connect.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       HOW IT WORKS
+  ====================================================== -->
+
+  <section class="hotel-process">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>
+          SIMPLE BOOKING PROCESS
+        </span>
+
+        <h2>
+          How It
+          <strong>Works</strong>
+        </h2>
+
+      </div>
+
+
+      <div class="hotel-process-grid">
+
+
+        <div class="hotel-process-card">
+
+          <div class="hotel-process-number">
+            01
+          </div>
+
+          <h3>
+            Send Your Request
+          </h3>
+
+          <p>
+            Tell us your destination, dates,
+            guests and hotel preferences.
+          </p>
+
+        </div>
+
+
+        <div class="hotel-process-card">
+
+          <div class="hotel-process-number">
+            02
+          </div>
+
+          <h3>
+            We Find Options
+          </h3>
+
+          <p>
+            Our team checks suitable accommodation
+            options based on your requirements.
+          </p>
+
+        </div>
+
+
+        <div class="hotel-process-card">
+
+          <div class="hotel-process-number">
+            03
+          </div>
+
+          <h3>
+            Choose Your Hotel
+          </h3>
+
+          <p>
+            We'll discuss the available options,
+            prices and booking conditions with you.
+          </p>
+
+        </div>
+
+
+        <div class="hotel-process-card">
+
+          <div class="hotel-process-number">
+            04
+          </div>
+
+          <h3>
+            Confirm Your Booking
+          </h3>
+
+          <p>
+            Once you approve an option, we'll
+            proceed with the reservation process.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FINAL CTA
+  ====================================================== -->
+
+  <section class="hotel-final-cta">
+
+    <div class="container">
+
+      <span class="section-tag">
+        BALLOW CONNECT
+      </span>
+
+      <h2>
+        Ready to Find Your Stay?
+      </h2>
+
+      <p>
+        Tell us where you're going and we'll help
+        you find accommodation that fits your needs.
+      </p>
+
+      <a
+        href="#hotelRequest"
+        class="btn btn-dark"
+      >
+        Find My Hotel
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div>
+
+        <div class="logo footer-logo">
+
+          <span>
+            BALLOW
+          </span>
+
+          <small>
+            CONNECT
+          </small>
+
+        </div>
+
+        <p>
+          Travel. Ship. Shop. Connect.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Services
+        </h4>
+
+        <a href="flights.html">
+          Flight Booking
+        </a>
+
+        <a href="cargo.html">
+          Cargo Shipping
+        </a>
+
+        <a href="hotels.html">
+          Hotels
+        </a>
+
+        <a href="tours.html">
+          Tours
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          African Shop
+        </a>
+
+        <a href="shop.html">
+          Food & Groceries
+        </a>
+
+        <a href="shop.html">
+          Fashion
+        </a>
+
+        <a href="shop.html">
+          Cosmetics
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="https://wa.me/2347030457948">
+          WhatsApp
+        </a>
+
+        <span>
+          Cairo • Lagos • Worldwide
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <span>
+          © 2026 Ballow Connect. All rights reserved.
+        </span>
+
+        <span>
+          Travel • Cargo • African Shop
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       HOTEL SCRIPT
+  ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+
+        /* ================================================
+           MOBILE NAVIGATION
+        ================================================= */
+
+        const menuToggle =
+          document.getElementById("menuToggle");
+
+        const mainNav =
+          document.getElementById("mainNav");
+
+
+        if (menuToggle && mainNav) {
+
+          menuToggle.addEventListener(
+            "click",
+            function () {
+
+              mainNav.classList.toggle("active");
+
+            }
+          );
+
+
+          mainNav
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+              link.addEventListener(
+                "click",
+                function () {
+
+                  mainNav.classList.remove("active");
+
+                }
+              );
+
+            });
+
+        }
+
+
+        /* ================================================
+           HOTEL REQUEST
+        ================================================= */
+
+        const hotelForm =
+          document.getElementById("hotelRequestForm");
+
+
+        if (hotelForm) {
+
+          hotelForm.addEventListener(
+            "submit",
+            function (event) {
+
+              event.preventDefault();
+
+
+              const name =
+                document
+                  .getElementById("hotelName")
+                  .value
+                  .trim();
+
+
+              const phone =
+                document
+                  .getElementById("hotelPhone")
+                  .value
+                  .trim();
+
+
+              const destination =
+                document
+                  .getElementById("hotelDestination")
+                  .value
+                  .trim();
+
+
+              const checkin =
+                document
+                  .getElementById("hotelCheckin")
+                  .value;
+
+
+              const checkout =
+                document
+                  .getElementById("hotelCheckout")
+                  .value;
+
+
+              const guests =
+                document
+                  .getElementById("hotelGuests")
+                  .value;
+
+
+              const rooms =
+                document
+                  .getElementById("hotelRooms")
+                  .value;
+
+
+              const hotelType =
+                document
+                  .getElementById("hotelType")
+                  .value;
+
+
+              const roomType =
+                document
+                  .getElementById("hotelRoomType")
+                  .value;
+
+
+              const budget =
+                document
+                  .getElementById("hotelBudget")
+                  .value
+                  .trim();
+
+
+              const currency =
+                document
+                  .getElementById("hotelPayment")
+                  .value;
+
+
+              const requests =
+                document
+                  .getElementById("hotelRequests")
+                  .value
+                  .trim();
+
+
+              if (
+                !name ||
+                !phone ||
+                !destination ||
+                !checkin ||
+                !checkout ||
+                !guests ||
+                !rooms ||
+                !hotelType
+              ) {
+
+                alert(
+                  "Please complete all required information."
+                );
+
+                return;
+
+              }
+
+
+              if (
+                new Date(checkout) <=
+                new Date(checkin)
+              ) {
+
+                alert(
+                  "Check-out date must be after the check-in date."
+                );
+
+                return;
+
+              }
+
+
+              let message =
+                "Hello Ballow Connect,%0A%0A" +
+
+                "🏨 HOTEL RESERVATION REQUEST%0A%0A" +
+
+                "👤 Name: " +
+                encodeURIComponent(name) +
+
+                "%0A" +
+
+                "📱 Phone / WhatsApp: " +
+                encodeURIComponent(phone) +
+
+                "%0A%0A" +
+
+                "📍 Destination: " +
+                encodeURIComponent(destination) +
+
+                "%0A" +
+
+                "📅 Check-in: " +
+                encodeURIComponent(checkin) +
+
+                "%0A" +
+
+                "📅 Check-out: " +
+                encodeURIComponent(checkout) +
+
+                "%0A" +
+
+                "👥 Guests: " +
+                encodeURIComponent(guests) +
+
+                "%0A" +
+
+                "🛏️ Rooms: " +
+                encodeURIComponent(rooms) +
+
+                "%0A%0A" +
+
+                "🏨 Hotel Type: " +
+                encodeURIComponent(hotelType) +
+
+                "%0A" +
+
+                "🛌 Room Preference: " +
+                encodeURIComponent(
+                  roomType || "Not specified"
+                ) +
+
+                "%0A" +
+
+                "💰 Budget: " +
+                encodeURIComponent(
+                  budget || "Not specified"
+                ) +
+
+                "%0A" +
+
+                "💱 Currency: " +
+                encodeURIComponent(currency);
+
+
+              if (requests) {
+
+                message +=
+                  "%0A%0A" +
+                  "📝 Special Requests:%0A" +
+                  encodeURIComponent(requests);
+
+              }
+
+
+              message +=
+                "%0A%0APlease provide me with suitable hotel options, available rates and booking details.";
+
+
+              const whatsappURL =
+                "https://wa.me/2347030457948?text=" +
+                message;
+
+
+              window.open(
+                whatsappURL,
+                "_blank"
+              );
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
